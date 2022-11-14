@@ -1,0 +1,1487 @@
+UNIX / LINUX:
+============
+UNIX/LINUX is an operationg system . By using operating system (OS) users or applications
+
+commuinicate with hardware components
+
+Two types of softwares:
+=====================
+1.system software
+2.Application software
+
+1.system software:
+===================
+By using system software we commuinicate with hardware devices
+Eg: OS
+
+2.Application software:
+========================
+
+By using application software we can perform some business things
+Eg: python,java,.net....
+
+UNIX OS:
+========
+UNIX os is freeware and open source
+GUI and CUI 
+multi user operating system
+
+Flavors in UNIX os:
+==================
+1.ubuntu
+2.RED hat
+3.cent os
+4.Fedora
+5.slackware
+6.mint
+7.kaali linux 
+e.t.c
+
+
+Components of UNIX os:
+=====================
+1.shell ------->verify commands
+2.kernal-------->exicute commands and commuinicate with hardware
+
+
+
+
+open terminal ctl+alt+t
+
+close  terminal ctl+d
+
+
+1.pwd:
+=========
+To know present working directory 
+ 
+jagang@jagang-VirtualBox:~$ pwd
+/home/jagang
+2.ls:
+====
+list the all files and directories in pwd
+jagang@jagang-VirtualBox:~$ ls
+abc.txt  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+jagang@jagang-VirtualBox:~$ 
+
+3.mkdir:
+======
+To create a directory
+
+jagang@jagang-VirtualBox:~$ mkdir  XYZ_123
+jagang@jagang-VirtualBox:~$ ls
+abc.txt  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  XYZ_123
+jagang@jagang-VirtualBox:~$ 
+
+4.cd:
+====
+
+change directory
+agang@jagang-VirtualBox:~$ ls
+abc.txt  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  XYZ_123
+jagang@jagang-VirtualBox:~$ cd Documents
+jagang@jagang-VirtualBox:~/Documents$ pwd
+/home/jagang/Documents
+jagang@jagang-VirtualBox:~/Documents$ ls
+jagang@jagang-VirtualBox:~/Documents$ 
+
+5.touch:
+=========
+It is creating a file
+
+jagang@jagang-VirtualBox:~/Documents$ ls
+jagang@jagang-VirtualBox:~/Documents$ touch  abc_def.txt
+jagang@jagang-VirtualBox:~/Documents$ ls
+abc_def.txt
+jagang@jagang-VirtualBox:~/Documents$ pwd
+/home/jagang/Documents
+jagang@jagang-VirtualBox:~/Documents$ 
+
+
+6. rm:
+======
+
+we can remove file 
+
+
+jagang@jagang-VirtualBox:~/Documents$ ls
+abc_def.txt
+jagang@jagang-VirtualBox:~/Documents$ pwd
+/home/jagang/Documents
+jagang@jagang-VirtualBox:~/Documents$ rm abc_def.txt
+jagang@jagang-VirtualBox:~/Documents$ ls
+
+
+7.rmdir:
+========
+
+we can remove directory
+
+
+agang@jagang-VirtualBox:~/Documents$ mkdir ABC123
+jagang@jagang-VirtualBox:~/Documents$ ls
+ABC123
+jagang@jagang-VirtualBox:~/Documents$ rm ABC123
+rm: cannot remove 'ABC123': Is a directory
+jagang@jagang-VirtualBox:~/Documents$ rmdir ABC123
+jagang@jagang-VirtualBox:~/Documents$ ls
+jagang@jagang-VirtualBox:~/Documents$ 
+
+
+8. date:
+=========
+display current date and time
+
+jagang@jagang-VirtualBox:~/Documents$ date
+Friday 22 April 2022 08:21:39 AM IST
+
+9.cal:
+=======
+
+jagang@jagang-VirtualBox:~/Documents$ cal
+     April 2022       
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+                      
+10.help:
+=========
+display all commands
+
+11.clear:
+========
+clear the screen
+
+12.exit:
+======
+exit from terminal 
+
+
+
+
+Zoom in terminal    shift+ctrl++
+zoom out terminal    ctl+ -
+ Types of files in linux:
+ =======================
+ 
+In python everything treated as object
+
+In Linux os everything treated as File
+
+Three types of files in Linux:
+=============================
+1.Normal files 
+2.Directory files
+3.Device Files
+
+1.Normal files :
+===============
+These files contains only data i.e text files and binary files (audio,videos,images)
+
+2.Directory files:
+==================
+These files represents directories
+
+3.Device Files:
+==============
+Every thing in Linux treated as file  so that devices are also treated as File
+Eg: USB , Terminal e.t.c
+
+
+terminal 1:
+=========
+agang@jagang-VirtualBox:~$ tty
+/dev/pts/0
+jagang@jagang-VirtualBox:~$ Hello
+Hai
+Good morning 
+
+terminal 2:
+============
+agang@jagang-VirtualBox:~$ tty
+/dev/pts/0
+jagang@jagang-VirtualBox:~$ Hello
+Hai
+Good morning 
+
+
+
+How check file types:
+=====================
+ls -l :
+=====
+It display all the files and folders in pwd with file types also
+
+The first charecter  indicates type of file
+
+d   ------  device file
+- ---------- normal file
+l ---------- link file
+c  ----------- charecter special file
+b --------   blank file
+s --------- socket file
+
+jagang@jagang-VirtualBox:/$ cd dev
+jagang@jagang-VirtualBox:/dev$ pwd
+/dev
+jagang@jagang-VirtualBox:/dev$ ls -l
+total 0
+crw-r--r--  1 root    root     10, 235 Apr 23 06:59 autofs
+drwxr-xr-x  2 root    root         420 Apr 23 06:59 block
+drwxr-xr-x  2 root    root          80 Apr 23 06:58 bsg
+crw-------  1 root    root     10, 234 Apr 23 06:58 btrfs-control
+drwxr-xr-x  3 root    root          60 Apr 23 06:58 bus
+lrwxrwxrwx  1 root    root           3 Apr 23 06:59 cdrom -> sr0
+drwxr-xr-x  2 root    root        3680 Apr 23 06:59 char
+crw--w----  1 root    tty       5,   1 Apr 23 06:59 console
+lrwxrwxrwx  1 root    root          11 Apr 23 06:58 core -> /proc/kcore
+crw-------  1 root    root     10, 123 Apr 23 06:59 cpu_dma_latency
+crw-------  1 root    root     10, 203 Apr 23 06:58 cuse
+drwxr-xr-x  7 root    root         140 Apr 23 06:59 disk
+drwxr-xr-x  2 root    root          60 Apr 23 06:58 dma_heap
+drwxr-xr-x  3 root    root         100 Apr 23 06:59 dri
+lrwxrwxrwx  1 root    root           3 Apr 23 06:59 dvd -> sr0
+crw-------  1 root    root     10, 126 Apr 23 06:59 ecryptfs
+crw-rw----  1 root    video    29,   0 Apr 23 06:59 fb0
+lrwxrwxrwx  1 root    root          13 Apr 23 06:58 fd -> /proc/self/fd
+crw-rw-rw-  1 root    root      1,   7 Apr 23 06:59 full
+crw-rw-rw-  1 root    root     10, 229 Apr 23 06:59 fuse
+crw-------  1 root    root    240,   0 Apr 23 06:59 hidraw0
+crw-------  1 root    root     10, 228 Apr 23 06:59 hpet
+drwxr-xr-x  2 root    root           0 Apr 23 06:58 hugepages
+crw-------  1 root    root     10, 183 Apr 23 06:59 hwrng
+crw-------  1 root    root     89,   0 Apr 23 06:59 i2c-0
+lrwxrwxrwx  1 root    root          12 Apr 23 06:58 initctl -> /run/initctl
+drwxr-xr-x  4 root    root         340 Apr 23 06:59 input
+crw-r--r--  1 root    root      1,  11 Apr 23 06:59 kmsg
+drwxr-xr-x  2 root    root          60 Apr 23 06:58 lightnvm
+lrwxrwxrwx  1 root    root          28 Apr 23 06:58 log -> /run/systemd/journal/dev-log
+brw-rw----  1 root    disk      7,   0 Apr 23 06:59 loop0
+brw-rw----  1 root    disk      7,   1 Apr 23 06:59 loop1
+brw-rw----  1 root    disk      7,  10 Apr 23 06:59 loop10
+brw-rw----  1 root    disk      7,  11 Apr 23 06:59 loop11
+brw-rw----  1 root    disk      7,  12 A
+
+
+
+File system Navigation commands:
+==============================
+ls -a:
+=========
+It display all files and folders in pwd including hidden files also.
+Hiden file names start with . symbol
+
+Eg:  .abc.txt ,.ABC
+jagang@jagang-VirtualBox:~$ ls -a
+.              .bash_logout  Desktop    .local    .profile   .vboxclient-clipboard.pid    Videos
+..             .bashrc       Documents  .mozilla  Public     .vboxclient-display.pid      XYZ_123
+abc.txt        .cache        Downloads  Music     .ssh       .vboxclient-draganddrop.pid
+.bash_history  .config       .gnupg     Pictures  Templates  .vboxclient-seamless.pid
+
+
+
+jagang@jagang-VirtualBox:~$ pwd
+/home/jagang
+jagang@jagang-VirtualBox:~$ mkdir MOHAN
+jagang@jagang-VirtualBox:~$ ls
+abc.txt  Desktop  Documents  Downloads  MOHAN  Music  Pictures  Public  Templates  Videos  XYZ_123
+jagang@jagang-VirtualBox:~$ cd MOHAN
+jagang@jagang-VirtualBox:~/MOHAN$ pwd
+/home/jagang/MOHAN
+jagang@jagang-VirtualBox:~/MOHAN$ touch abc.txt
+jagang@jagang-VirtualBox:~/MOHAN$ ls
+abc.txt
+jagang@jagang-VirtualBox:~/MOHAN$ ls -a 
+.  ..  abc.txt
+
+Every directory contains in LINUX os two default hidden files will be there
+
+.  ---------> represents present directory
+
+.. ---------->  Parent directory
+
+
+
+jagang@jagang-VirtualBox:~$ pwd
+/home/jagang
+jagang@jagang-VirtualBox:~$ ls
+abc.txt  Desktop  Documents  Downloads  MOHAN  Music  Pictures  Public  Templates  Videos  XYZ_123
+jagang@jagang-VirtualBox:~$ cd MOHAN
+jagang@jagang-VirtualBox:~/MOHAN$ pwd
+/home/jagang/MOHAN
+jagang@jagang-VirtualBox:~/MOHAN$ cd . 
+jagang@jagang-VirtualBox:~/MOHAN$ pwd
+/home/jagang/MOHAN
+jagang@jagang-VirtualBox:~/MOHAN$ cd ..
+jagang@jagang-VirtualBox:~$ pwd
+/home/jagang
+jagang@jagang-VirtualBox:~$ cd ..
+jagang@jagang-VirtualBox:/home$ pwd
+/home
+jagang@jagang-VirtualBox:/home$ cd ..
+jagang@jagang-VirtualBox:/$ pwd
+/
+jagang@jagang-VirtualBox:/$ 
+
+
+
+
+Every directory having two hidden files 
+. -------------->PWD
+.. -------------->Parent Directory
+
+cd.
+========
+change pwd
+
+cd ..
+====
+It changes Parent directory
+
+
+cd 
+====
+cd with out any argument it changes to user home directory
+
+jagang@jagang-VirtualBox:/$ pwd
+/
+jagang@jagang-VirtualBox:/$ cd 
+jagang@jagang-VirtualBox:~$ pwd
+/home/jagang
+ cd ~:
+ ====
+ cd ~ with out any argument it changes to user home directory
+ jagang@jagang-VirtualBox:~$ cd ~
+jagang@jagang-VirtualBox:~$ pwd
+/home/jagang
+jagang@jagang-VirtualBox:~$ cd ..
+jagang@jagang-VirtualBox:/home$ cd ..
+jagang@jagang-VirtualBox:/$ pwd
+/
+jagang@jagang-VirtualBox:/$ cd ~
+jagang@jagang-VirtualBox:~$ pwd
+/home/jagang
+jagang@jagang-VirtualBox:~$ 
+
+cd -:
+=====
+It moving from curtren working directory to  previous work directory
+
+jagang@jagang-VirtualBox:~$ pwd
+/home/jagang
+jagang@jagang-VirtualBox:~$ cd ..
+jagang@jagang-VirtualBox:/home$ pwd
+/home
+jagang@jagang-VirtualBox:/home$ cd -
+/home/jagang
+jagang@jagang-VirtualBox:~$ 
+
+
+jagang@jagang-VirtualBox:~$ pwd
+/home/jagang
+jagang@jagang-VirtualBox:~$ cd ../..
+jagang@jagang-VirtualBox:/$ pwd
+/
+jagang@jagang-VirtualBox:/$ cd -
+/home/jagang
+jagang@jagang-VirtualBox:~$ 
+
+Linux file system:
+==================
+Linux file system has tree like structure .It starts with root (/)
+
+1 bin:
+======
+Bin means binary 
+This directory contains all binary executables related to linux commands
+
+agang@jagang-VirtualBox:~$ which ls
+/usr/bin/ls
+jagang@jagang-VirtualBox:~$ which touch
+/usr/bin/touch
+jagang@jagang-VirtualBox:~$ which cal
+/usr/bin/cal
+jagang@jagang-VirtualBox:~$ 
+
+
+
+2.sbin:
+=======
+
+sbin means system bin or secondary bin
+This directory contains all binary executables related to admin level commands
+
+Eg:
+===
+ Disk Partion ,Networking commands....
+ 
+3.etc:
+======
+This directory contains all system configuration files
+
+agang@jagang-VirtualBox:/home$ cd ..
+jagang@jagang-VirtualBox:/$ pwd
+/
+jagang@jagang-VirtualBox:/$ cd etc
+jagang@jagang-VirtualBox:/etc$ pwd
+/etc
+jagang@jagang-VirtualBox:/etc$ ls
+acpi                    fwupd            ltrace.conf              rpc
+adduser.conf            gai.conf         machine-id               rsyslog.conf
+alsa                    gamemode.ini     magic                    rsyslog.d
+alternatives            gdb              magic.mime               rygel.conf
+anacrontab              gdm3             mailcap                  sane.d
+apg.conf                geoclue          mailcap.order            security
+apm                     ghostscript      manpath.config           selinux
+apparmor                glvnd         
+
+
+4.tmp:
+=======
+tmp contains all tempory files which are related current session
+
+5.dev:
+=====
+dev means device
+all device files will be stored inside dev directory
+
+6.mnt:
+======
+mnt means mounting
+
+The files which are in external devices lik pen drive,cd ....attached to linux file system
+This process is known as mounting 
+1.maual mounting
+2.automatic mounting
+
+5.media:
+=======
+The files of automatic mounting will be placed inside media directory
+
+8.opt:
+======
+opt means optional
+
+it contains third party softwares 
+
+9.lib:
+=======
+lib means library
+
+It contains all library files related to our commands
+
+10.var:
+=======
+var means variable
+ The files which are keep on changes those files stored var directory
+ Eg: logfile
+ 
+11.home:
+=======
+Linux os multople user os 
+Every user having their own home directory
+12 .Proc:
+========
+Proc means process directory
+Linux os is multi tasking system
+At a time multiple tasks will running 
+Each task having their own Process ID (PID)
+PID information will be stored in proc directory
+13 .root:
+=========
+
+root is directory which act as home directory for admin user
+
+14.usr:
+======
+usr means user
+all user realted softwares
+
+15. boot:
+============
+boot contains files which are related to boot linux os
+
+
+
+ls command:
+===========
+List out all files and folders inside pwd
+to get documentaion of any command we can go for man
+
+Eg: man ls
+
+ls ---->Display files and folders in cwd
+
+ls destination 
+=============
+agang@jagang-VirtualBox:/$ ls
+bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   snap  swapfile  tmp  var
+boot  dev    home  lib32  libx32  media       opt  root  sbin  srv   sys       usr  VBox.log
+jagang@jagang-VirtualBox:/$ ls 
+bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   snap  swapfile  tmp  var
+boot  dev    home  lib32  libx32  media       opt  root  sbin  srv   sys       usr  VBox.log
+jagang@jagang-VirtualBox:/$ ls /home
+jagang
+jagang@jagang-VirtualBox:/$ ls /etc
+acpi                    crontab              gnome            ld.so.conf      netplan                  rc2.d              sudoers.d
+adduser.conf            cron.weekly          groff            ld.so.conf.d    network                  rc3.d              sysctl.conf
+alsa                    cups                 group            legal           networkd-dispatcher      rc4.d              sysctl.d
+alternatives            cupshelpers          group-           libao.conf      NetworkManager           rc5.d              systemd
+anacrontab              dbus-1               grub.d           libaudit.conf   networks                 rc6.d              terminfo
+apg.conf                dconf                gshadow          libblockdev     newt                     rcS.d              thermald
+apm                     debconf.conf         gshadow-         libnl-3         nsswitch.conf            resolv.conf        timezone
+apparmor                debian_version       gss              libpaper.d      openvpn                  rmt                tmpfiles.d
+apparmor.d              default              gtk-2.0          locale.alias    opt                      rpc                ubuntu-advantage
+apport                  deluser.conf         gtk-3.0          locale.gen      os-release               rsyslog.conf       ucf.conf
+appstream.conf          depmod.d             hdparm.conf      localtime       PackageKit               rsyslog.d          udev
+apt                     dhcp                 host.conf        logcheck        pam.conf                 rygel.conf         udisks2
+avahi                   dictionaries-common  hostid           login.defs      pam.d                    sane.d             ufw
+bash.bashrc             dpkg                 hostname         logrotate.conf  papersize                security           update-manager
+bash_completion         e2scrub.conf         hosts            logrotate.d     passwd                   selinux            update-motd.d
+bash_completion.d       emacs                hosts.allow      lsb-release     passwd-                  sensors3.conf      update-notifier
+bindresvport.blacklist  environment          hosts.deny       ltrace.conf     pcmcia                   sensors.d          UPower
+binfmt.d                environment.d        hp               machine-id      perl                     services           usb_modeswitch.conf
+bluetooth               ethertypes           ifplugd          magic           pki                      sgml               usb_modeswitch.d
+brlapi.key              firefox            
+
+
+
+ls-l:
+====
+agang@jagang-VirtualBox:/$ ls -l
+total 459344
+lrwxrwxrwx   1 root root         7 Apr  8 10:34 bin -> usr/bin
+drwxr-xr-x   4 root root      4096 Apr  8 11:04 boot
+drwxrwxr-x   2 root root      4096 Apr  8 10:45 cdrom
+drwxr-xr-x  19 root root      4180 Apr 26 07:02 dev
+drwxr-xr-x 128 root root     12288 Apr  8 11:10 etc
+drwxr-xr-x   3 root root      4096 Apr  8 10:48 home
+lrwxrwxrwx   1 root root         7 Apr  8 10:34 lib -> usr/lib
+lrwxrwxrwx   1 root root         9 Apr  8 10:34 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root         9 Apr  8 10:34 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root        10 Apr  8 10:34 libx32 -> usr/libx32
+drwx------   2 root root     16384 Apr  8 10:34 lost+found
+drwxr-xr-x   3 root root      4096 Apr  8 11:09 media
+drwxr-xr-x   2 root root      4096 Apr 23  2020 mnt
+drwxr-xr-x   3 root root      4096 Apr  8 11:09 opt
+dr-xr-xr-x 266 root root         0 Apr 26 07:01 proc
+drwx------   4 root root      4096 Apr 26 07:02 root
+drwxr-xr-x  31 root root       840 Apr 26 07:02 run
+lrwxrwxrwx   1 root root         8 Apr  8 10:34 sbin -> usr/sbin
+drwxr-xr-x  11 root root      4096 Apr 18 18:23 snap
+drwxr-xr-x   2 root root      4096 Apr 23  2020 srv
+-rw-------   1 root root 470287360 Apr  8 10:34 swapfile
+dr-xr-xr-x  13 root root         0 Apr 26 07:01 sys
+drwxrwxrwt  18 root root      4096 Apr 26 07:23 tmp
+drwxr-xr-x  14 root root      4096 Apr 23  2020 usr
+drwxr-xr-x  14 root root      4096 Apr 23  2020 var
+-rw-------   1 root root         0 Apr 26 07:02 VBox.log
+ls-r:
+=====
+display data in reverse
+
+agang@jagang-VirtualBox:/$ ls
+bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   snap  swapfile  tmp  var
+boot  dev    home  lib32  libx32  media       opt  root  sbin  srv   sys       usr  VBox.log
+jagang@jagang-VirtualBox:/$ ls -r 
+VBox.log  usr  sys       srv   sbin  root  opt  media       libx32  lib32  home  dev    boot
+var       tmp  swapfile  snap  run   proc  mnt  lost+found  lib64   lib    etc   cdrom  bin
+jagang@jagang-VirtualBox:/$ 
+
+ls -t:
+=====
+t means last modified or created files displayed on top
+
+agang@jagang-VirtualBox:/$ ls
+bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   snap  swapfile  tmp  var
+boot  dev    home  lib32  libx32  media       opt  root  sbin  srv   sys       usr  VBox.log
+jagang@jagang-VirtualBox:/$ ls -r 
+VBox.log  usr  sys       srv   sbin  root  opt  media       libx32  lib32  home  dev    boot
+var       tmp  swapfile  snap  run   proc  mnt  lost+found  lib64   lib    etc   cdrom  bin
+jagang@jagang-VirtualBox:/$ 
+
+
+jagang@jagang-VirtualBox:/$ ls -lt
+total 459344
+drwxrwxrwt  18 root root      4096 Apr 26 07:23 tmp
+drwxr-xr-x  31 root root       840 Apr 26 07:02 run
+-rw-------   1 root root         0 Apr 26 07:02 VBox.log
+drwx------   4 root root      4096 Apr 26 07:02 root
+drwxr-xr-x  19 root root      4180 Apr 26 07:02 dev
+dr-xr-xr-x 262 root root         0 Apr 26 07:01 proc
+dr-xr-xr-x  13 root root         0 Apr 26 07:01 sys
+drwxr-xr-x  11 root root      4096 Apr 18 18:23 snap
+drwxr-xr-x 128 root root     12288 Apr  8 11:10 etc
+drwxr-xr-x   3 root root      4096 Apr  8 11:09 opt
+drwxr-xr-x   3 root root      4096 Apr  8 11:09 media
+drwxr-xr-x   4 root root      4096 Apr  8 11:04 boot
+drwxr-xr-x   3 root root      4096 Apr  8 10:48 home
+drwxrwxr-x   2 root root      4096 Apr  8 10:45 cdrom
+lrwxrwxrwx   1 root root         7 Apr  8 10:34 bin -> usr/bin
+lrwxrwxrwx   1 root root         7 Apr  8 10:34 lib -> usr/lib
+lrwxrwxrwx   1 root root         9 Apr  8 10:34 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root         9 Apr  8 10:34 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root        10 Apr  8 10:34 libx32 -> usr/libx32
+lrwxrwxrwx   1 root root         8 Apr  8 10:34 sbin -> usr/sbin
+-rw-------   1 root root 470287360 Apr  8 10:34 swapfile
+drwx------   2 root root     16384 Apr  8 10:34 lost+found
+drwxr-xr-x  14 root root      4096 Apr 23  2020 var
+drwxr-xr-x  14 root root      4096 Apr 23  2020 usr
+drwxr-xr-x   2 root root      4096 Apr 23  2020 mnt
+drwxr-xr-x   2 root root      4096 Apr 23  2020 srv
+jagang@jagang-VirtualBox:/$ ^C
+
+
+ls -lrt:
+=====
+jagang@jagang-VirtualBox:/$ ls -lt
+total 459344
+drwxrwxrwt  18 root root      4096 Apr 26 07:23 tmp
+drwxr-xr-x  31 root root       840 Apr 26 07:02 run
+-rw-------   1 root root         0 Apr 26 07:02 VBox.log
+drwx------   4 root root      4096 Apr 26 07:02 root
+drwxr-xr-x  19 root root      4180 Apr 26 07:02 dev
+dr-xr-xr-x 262 root root         0 Apr 26 07:01 proc
+dr-xr-xr-x  13 root root         0 Apr 26 07:01 sys
+drwxr-xr-x  11 root root      4096 Apr 18 18:23 snap
+drwxr-xr-x 128 root root     12288 Apr  8 11:10 etc
+drwxr-xr-x   3 root root      4096 Apr  8 11:09 opt
+drwxr-xr-x   3 root root      4096 Apr  8 11:09 media
+drwxr-xr-x   4 root root      4096 Apr  8 11:04 boot
+drwxr-xr-x   3 root root      4096 Apr  8 10:48 home
+drwxrwxr-x   2 root root      4096 Apr  8 10:45 cdrom
+lrwxrwxrwx   1 root root         7 Apr  8 10:34 bin -> usr/bin
+lrwxrwxrwx   1 root root         7 Apr  8 10:34 lib -> usr/lib
+lrwxrwxrwx   1 root root         9 Apr  8 10:34 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root         9 Apr  8 10:34 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root        10 Apr  8 10:34 libx32 -> usr/libx32
+lrwxrwxrwx   1 root root         8 Apr  8 10:34 sbin -> usr/sbin
+-rw-------   1 root root 470287360 Apr  8 10:34 swapfile
+drwx------   2 root root     16384 Apr  8 10:34 lost+found
+drwxr-xr-x  14 root root      4096 Apr 23  2020 var
+drwxr-xr-x  14 root root      4096 Apr 23  2020 usr
+drwxr-xr-x   2 root root      4096 Apr 23  2020 mnt
+drwxr-xr-x   2 root root      4096 Apr 23  2020 srv
+jagang@jagang-VirtualBox:/$ ^C
+
+ls -a:
+=====
+It display all hidden files and normal files
+jagang@jagang-VirtualBox:/$ ls -a 
+.   bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   snap  swapfile  tmp  var
+..  boot  dev    home  lib32  libx32  media       opt  root  sbin  srv   sys       usr  VBox.log
+jagang@jagang-VirtualBox:/$ 
+
+
+ls -A:
+========
+It display all hidden files excluding . and .. files
+
+agang@jagang-VirtualBox:/$ cd 
+jagang@jagang-VirtualBox:~$ pwd
+/home/jagang
+jagang@jagang-VirtualBox:~$ touch .abc.txt
+jagang@jagang-VirtualBox:~$ ls
+abc.txt  Desktop  Documents  Downloads  MOHAN  Music  Pictures  Public  Templates  Videos  XYZ_123
+jagang@jagang-VirtualBox:~$ ls -a
+.         abc.txt        .bashrc  Desktop    .gnupg  .mozilla  .profile  Templates                  .vboxclient-draganddrop.pid  XYZ_123
+..        .bash_history  .cache   Documents  .local  Music     Public    .vboxclient-clipboard.pid  .vboxclient-seamless.pid
+.abc.txt  .bash_logout   .config  Downloads  MOHAN   Pictures  .ssh      .vboxclient-display.pid    Videos
+jagang@jagang-VirtualBox:~$ ls -A
+.abc.txt       .bash_logout  .config    Downloads  MOHAN     Pictures  .ssh                       .vboxclient-display.pid      Videos
+abc.txt        .bashrc       Desktop    .gnupg     .mozilla  .profile  Templates                  .vboxclient-draganddrop.pid  XYZ_123
+.bash_history  .cache        Documents  .local     Music     Public    .vboxclient-clipboard.pid  .vboxclient-seamless.pid
+jagang@jagang-VirtualBox:~$ 
+
+
+
+ls | less:
+==========
+Which is display only few files
+
+ls | more:
+==========
+
+which is similar to ls | less
+
+ls | head -5:
+=============
+jagang@jagang-VirtualBox:/etc$ ls  | head -5
+acpi
+adduser.conf
+alsa
+alternatives
+anacrontab
+ls  | tail -5:
+==============
+jagang@jagang-VirtualBox:/etc$ ls  | tail -5
+X11
+xattr.conf
+xdg
+xml
+zsh_command_not_found
+jagang@jagang-VirtualBox:/etc$ 
+
+
+Date:
+===
+
+display system time
+jagang@jagang-VirtualBox:/etc$ date
+Tuesday 26 April 2022 07:46:38 AM IST
+
+
+date +%D:
+=======
+jagang@jagang-VirtualBox:/etc$ date +%D
+04/26/22
+ date+%T:
+ ==========
+ jagang@jagang-VirtualBox:/etc$ date +%D
+04/26/22
+
+
+agang@jagang-VirtualBox:/etc$ date
+Tuesday 26 April 2022 07:46:38 AM IST
+jagang@jagang-VirtualBox:/etc$ date +%D
+04/26/22
+jagang@jagang-VirtualBox:/etc$ date +%T
+07:48:29
+jagang@jagang-VirtualBox:/etc$ ^C
+jagang@jagang-VirtualBox:/etc$ date +%d
+26
+jagang@jagang-VirtualBox:/etc$ date +%m
+04
+jagang@jagang-VirtualBox:/etc$ date +%y
+22
+jagang@jagang-VirtualBox:/etc$ date +%Y
+2022
+jagang@jagang-VirtualBox:/etc$ date +%H
+07
+jagang@jagang-VirtualBox:/etc$ date +%M
+50
+jagang@jagang-VirtualBox:/etc$ date +%S
+43
+jagang@jagang-VirtualBox:/etc$ date +%S
+47
+jagang@jagang-VirtualBox:/etc$ 
+
+time stamp files :
+=============
+$(date "+%Y.%m.%d-%H.%M.%S")
+
+jagang@jagang-VirtualBox:~$ touch ABC_$(date "+%Y.%m.%d-%H.%M.%S")
+jagang@jagang-VirtualBox:~$ ls
+ABC_2022.04.26-07.56.47  abc.txt  Documents  MOHAN  Pictures  Templates  xyz_                XYZ_123
+ABC_2022.04.26-07.57.38  Desktop  Downloads  Music  Public    Videos     xyz_06_01_2022.log  xyz_.log
+jagang@jagang-VirtualBox:~$ touch ABC_$(date "+%Y.%m.%d-%H.%M.%S")
+jagang@jagang-VirtualBox:~$ ls
+ABC_2022.04.26-07.56.47  ABC_2022.04.26-07.57.59  Desktop    Downloads  Music     Public     Videos  xyz_06_01_2022.log  xyz_.log
+ABC_2022.04.26-07.57.38  abc.txt                  Documents  MOHAN      Pictures  Templates  xyz_    XYZ_123
+jagang@jagang-VirtualBox:~$ ^C
+
+
+cal command:
+============
+
+jagang@jagang-VirtualBox:~$ cal
+     April 2022       
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+
+jagang@jagang-VirtualBox:~$ cal 2022
+                            2022
+      January               February               March          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5         1  2  3  4  5  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   6  7  8  9 10 11 12  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  13 14 15 16 17 18 19  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  20 21 22 23 24 25 26  
+23 24 25 26 27 28 29  27 28                 27 28 29 30 31        
+30 31                                                             
+
+       April                  May                   June          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                1  2   1  2  3  4  5  6  7            1  2  3  4  
+ 3  4  5  6  7  8  9   8  9 10 11 12 13 14   5  6  7  8  9 10 11  
+10 11 12 13 14 15 16  15 16 17 18 19 20 21  12 13 14 15 16 17 18  
+17 18 19 20 21 22 23  22 23 24 25 26 27 28  19 20 21 22 23 24 25  
+24 25 26 27 28 29 30  29 30 31              26 27 28 29 30        
+                                                                  
+
+        July                 August              September        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                1  2      1  2  3  4  5  6               1  2  3  
+ 3  4  5  6  7  8  9   7  8  9 10 11 12 13   4  5  6  7  8  9 10  
+10 11 12 13 14 15 16  14 15 16 17 18 19 20  11 12 13 14 15 16 17  
+17 18 19 20 21 22 23  21 22 23 24 25 26 27  18 19 20 21 22 23 24  
+24 25 26 27 28 29 30  28 29 30 31           25 26 27 28 29 30     
+31                                                                
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5               1  2  3  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   4  5  6  7  8  9 10  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  11 12 13 14 15 16 17  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  18 19 20 21 22 23 24  
+23 24 25 26 27 28 29  27 28 29 30           25 26 27 28 29 30 31  
+30 31                                                           
+
+jagang@jagang-VirtualBox:~$ cal 1
+                             1
+      January               February               March          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5         1  2  3  4  5  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   6  7  8  9 10 11 12  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  13 14 15 16 17 18 19  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  20 21 22 23 24 25 26  
+23 24 25 26 27 28 29  27 28                 27 28 29 30 31        
+30 31                                                             
+
+       April                  May                   June          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                1  2   1  2  3  4  5  6  7            1  2  3  4  
+ 3  4  5  6  7  8  9   8  9 10 11 12 13 14   5  6  7  8  9 10 11  
+10 11 12 13 14 15 16  15 16 17 18 19 20 21  12 13 14 15 16 17 18  
+17 18 19 20 21 22 23  22 23 24 25 26 27 28  19 20 21 22 23 24 25  
+24 25 26 27 28 29 30  29 30 31              26 27 28 29 30        
+                                                                  
+
+        July                 August              September        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                1  2      1  2  3  4  5  6               1  2  3  
+ 3  4  5  6  7  8  9   7  8  9 10 11 12 13   4  5  6  7  8  9 10  
+10 11 12 13 14 15 16  14 15 16 17 18 19 20  11 12 13 14 15 16 17  
+17 18 19 20 21 22 23  21 22 23 24 25 26 27  18 19 20 21 22 23 24  
+24 25 26 27 28 29 30  28 29 30 31           25 26 27 28 29 30     
+31                                                                
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5               1  2  3  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   4  5  6  7  8  9 10  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  11 12 13 14 15 16 17  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  18 19 20 21 22 23 24  
+23 24 25 26 27 28 29  27 28 29 30           25 26 27 28 29 30 31  
+30 31                                 
+
+cal 9999
+========
+agang@jagang-VirtualBox:~$ cal 9999
+                            9999
+      January               February               March          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                1  2      1  2  3  4  5  6      1  2  3  4  5  6  
+ 3  4  5  6  7  8  9   7  8  9 10 11 12 13   7  8  9 10 11 12 13  
+10 11 12 13 14 15 16  14 15 16 17 18 19 20  14 15 16 17 18 19 20  
+17 18 19 20 21 22 23  21 22 23 24 25 26 27  21 22 23 24 25 26 27  
+24 25 26 27 28 29 30  28                    28 29 30 31           
+31                                                                
+
+       April                  May                   June          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+             1  2  3                     1         1  2  3  4  5  
+ 4  5  6  7  8  9 10   2  3  4  5  6  7  8   6  7  8  9 10 11 12  
+11 12 13 14 15 16 17   9 10 11 12 13 14 15  13 14 15 16 17 18 19  
+18 19 20 21 22 23 24  16 17 18 19 20 21 22  20 21 22 23 24 25 26  
+25 26 27 28 29 30     23 24 25 26 27 28 29  27 28 29 30           
+                      30 31                                       
+
+        July                 August              September        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+             1  2  3   1  2  3  4  5  6  7            1  2  3  4  
+ 4  5  6  7  8  9 10   8  9 10 11 12 13 14   5  6  7  8  9 10 11  
+11 12 13 14 15 16 17  15 16 17 18 19 20 21  12 13 14 15 16 17 18  
+18 19 20 21 22 23 24  22 23 24 25 26 27 28  19 20 21 22 23 24 25  
+25 26 27 28 29 30 31  29 30 31              26 27 28 29 30        
+                                                                  
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                1  2      1  2  3  4  5  6            1  2  3  4  
+ 3  4  5  6  7  8  9   7  8  9 10 11 12 13   5  6  7  8  9 10 11  
+10 11 12 13 14 15 16  14 15 16 17 18 19 20  12 13 14 15 16 17 18  
+17 18 19 20 21 22 23  21 22 23 24 25 26 27  19 20 21 22 23 24 25  
+24 25 26 27 28 29 30  28 29 30              26 27 28 29 30 31     
+
+jagang@jagang-VirtualBox:~$ cal 10000
+cal: year `10000' not in range 1..9999
+
+
+cal 08 2019:
+===========
+agang@jagang-VirtualBox:~$ cal 08 2019
+    August 2019       
+Su Mo Tu We Th Fr Sa  
+             1  2  3  
+ 4  5  6  7  8  9 10  
+11 12 13 14 15 16 17  
+18 19 20 21 22 23 24  
+25 26 27 28 29 30 31  
+   
+
+Working with directories:
+==========================
+mkdir dir1:
+=============
+
+jagang@jagang-VirtualBox:~$ mkdir dir1
+jagang@jagang-VirtualBox:~$ ls
+ABC_2022.04.26-07.56.47  ABC_2022.04.26-07.57.59  Desktop  Documents  MOHAN  Pictures  Templates  xyz_                XYZ_123
+ABC_2022.04.26-07.57.38  abc.txt                  dir1     Downloads  Music  Public    Videos     xyz_06_01_2022.log  xyz_.log
+jagang@jagang-VirtualBox:~$
+
+mkdir dir2 dir3 dir4:
+========================
+agang@jagang-VirtualBox:~$ ls
+ABC_2022.04.26-07.56.47  abc.txt  dir2  Documents  Music     Templates  xyz_06_01_2022.log
+ABC_2022.04.26-07.57.38  Desktop  dir3  Downloads  Pictures  Videos     XYZ_123
+ABC_2022.04.26-07.57.59  dir1     dir4  MOHAN      Public    xyz_       xyz_.log
+jagang@jagang-VirtualBox:~$ 
+
+mkdir dir5/dir6/dir7:
+======================
+agang@jagang-VirtualBox:~$ ls
+ABC_2022.04.26-07.56.47  abc.txt  dir2  Documents  Music     Templates  xyz_06_01_2022.log
+ABC_2022.04.26-07.57.38  Desktop  dir3  Downloads  Pictures  Videos     XYZ_123
+ABC_2022.04.26-07.57.59  dir1     dir4  MOHAN      Public    xyz_       xyz_.log
+jagang@jagang-VirtualBox:~$ mkdir dir4/dir5
+jagang@jagang-VirtualBox:~$ ls
+ABC_2022.04.26-07.56.47  abc.txt  dir2  Documents  Music     Templates  xyz_06_01_2022.log
+ABC_2022.04.26-07.57.38  Desktop  dir3  Downloads  Pictures  Videos     XYZ_123
+ABC_2022.04.26-07.57.59  dir1     dir4  MOHAN      Public    xyz_       xyz_.log
+jagang@jagang-VirtualBox:~$ cd dir4
+jagang@jagang-VirtualBox:~/dir4$ ls
+dir5
+jagang@jagang-VirtualBox:~/dir4$ cd 
+jagang@jagang-VirtualBox:~$ ls
+'ABC_2022.04.26-07.56.47  abc.txt  dir2  Documents  Music     Templates  xyz_06_01_2022.log
+ABC_2022.04.26-07.57.38  Desktop  dir3  Downloads  Pictures  Videos     XYZ_123
+ABC_2022.04.26-07.57.59  dir1     dir4  MOHAN      Public    xyz_       xyz_.log
+jagang@jagang-VirtualBox:~$ mkdir dir4/dir5/dir6
+jagang@jagang-VirtualBox:~$ ls
+ABC_2022.04.26-07.56.47  abc.txt  dir2  Documents  Music     Templates  xyz_06_01_2022.log
+ABC_2022.04.26-07.57.38  Desktop  dir3  Downloads  Pictures  Videos     XYZ_123
+ABC_2022.04.26-07.57.59  dir1     dir4  MOHAN      Public    xyz_       xyz_.log
+jagang@jagang-VirtualBox:~$ cd dir4
+jagang@jagang-VirtualBox:~/dir4$ cd dir5
+jagang@jagang-VirtualBox:~/dir4/dir5$ ls
+dir6
+jagang@jagang-VirtualBox:~/dir4/dir5$ 
+
+
+mkdir -p dirA dirB dirC:
+========================
+
+
+
+
+
+rmdir dir1:
+==========
+It removes empty dir
+
+agang@jagang-VirtualBox:~$ rmdir dir1
+jagang@jagang-VirtualBox:~$ ls
+ABC_2022.04.26-07.56.47  ABC_2022.04.26-07.57.59  Desktop  dir3  Documents  MOHAN  Pictures  Templates  xyz_                XYZ_123
+ABC_2022.04.26-07.57.38  abc.txt                  dir2     dir4  Downloads  Music  Public    Videos     xyz_06_01_2022.log  xyz_.log
+jagang@jagang-VirtualBox:~$
+
+
+agang@jagang-VirtualBox:~$ mkdir PYTHON
+jagang@jagang-VirtualBox:~$ cd PYTHON
+jagang@jagang-VirtualBox:~/PYTHON$ pwd
+/home/jagang/PYTHON
+jagang@jagang-VirtualBox:~/PYTHON$ touch abc.py
+jagang@jagang-VirtualBox:~/PYTHON$ cd 
+jagang@jagang-VirtualBox:~$ ls
+ABC_2022.04.26-07.56.47  ABC_2022.04.26-07.57.59  Desktop  dir3  Documents  MOHAN  Pictures  PYTHON     Videos  xyz_06_01_2022.log  xyz_.log
+ABC_2022.04.26-07.57.38  abc.txt                  dir2     dir4  Downloads  Music  Public    Templates  xyz_    XYZ_123
+jagang@jagang-VirtualBox:~$ rmdir PYTHON
+rmdir: failed to remove 'PYTHON': Directory not empty
+jagang@jagang-VirtualBox:~$ 
+
+rm -r PYTHON:
+===============
+
+jagang@jagang-VirtualBox:~$ rm PYTHON
+rm: cannot remove 'PYTHON': Is a directory
+jagang@jagang-VirtualBox:~$ rm -f  PYTHON
+rm: cannot remove 'PYTHON': Is a directory
+jagang@jagang-VirtualBox:~$ rm -r  PYTHON
+jagang@jagang-VirtualBox:~$ ls
+ABC_2022.04.26-07.56.47  ABC_2022.04.26-07.57.59  Desktop  dir3  Documents  MOHAN  Pictures  Templates  xyz_                XYZ_123
+ABC_2022.04.26-07.57.38  abc.txt            
+
+
+working with files:
+===================
+create a file:
+===============
+To craete empty file using touch
+
+agang@jagang-VirtualBox:~$ touch abc_123.txt
+jagang@jagang-VirtualBox:~$ ^C
+jagang@jagang-VirtualBox:~$ 
+craete a file with some data:
+================================
+jagang@jagang-VirtualBox:~$ touch abc_123.txt
+jagang@jagang-VirtualBox:~$ ^C
+jagang@jagang-VirtualBox:~$ cat > f1.txt
+ABC
+DEF
+GH12267jagang@jagang-VirtualBox:~$ 
+jagang@jagang-VirtualBox:~$ 
+jagang@jagang-VirtualBox:~$ ^C
+jagang@jagang-VirtualBox:~$ 
+
+cat command:
+==========
+jagang@jagang-VirtualBox:~$ cat > f2.txt
+
+Hello world 
+How are You!jagang@jagang-VirtualBox:~$ 
+jagang@jagang-VirtualBox:~$ cat > f2.txt
+ABCDE
+dgvdsgbfjk
+dsjkbhdcjjagang@jagang-VirtualBox:~$ 
+jagang@jagang-VirtualBox:~$ cat >> f2.txt
+Hello world
+How are youjagang@jagang-VirtualBox:~$ 
+jagang@jagang-VirtualBox:~$ 
+
+
+agang@jagang-VirtualBox:~$ cat f2.txt
+ABCDE
+dgvdsgbfjk
+dsjkbhdcjHello world
+How are youjagang@jagang-VirtualBox:~$ cat f1.txt
+ABC
+DEF
+GH12267jagang@jagang-VirtualBox:~$ 
+
+jagang@jagang-VirtualBox:~$ cat    < f1.txt
+ABC
+DEF
+GH12267jagang@jagang-VirtualBox:~$ cat    < f2.txt
+ABCDE
+dgvdsgbfjk
+dsjkbhdcjHello world
+How are youjagang@jagang-VirtualBox:~$ 
+
+agang@jagang-VirtualBox:~$ cat > f3.txt
+ABCDEF
+12345
+jagang@jagang-VirtualBox:~$ 
+jagang@jagang-VirtualBox:~$ cat f3.txt
+ABCDEF
+12345
+jagang@jagang-VirtualBox:~$ touch f4.txt
+jagang@jagang-VirtualBox:~$ cat f4.txt
+jagang@jagang-VirtualBox:~$ cat < f4.txt
+jagang@jagang-VirtualBox:~$ cat < f3.txt
+ABCDEF
+12345
+jagang@jagang-VirtualBox:~$ cat < f3.txt > f4.txt
+jagang@jagang-VirtualBox:~$ cat f4.txt
+ABCDEF
+12345
+jagang@jagang-VirtualBox:~$ cat f3.txt
+ABCDEF
+12345
+jagang@jagang-VirtualBox:~$
+
+
+tac command:
+=========== 
+It display the data in reverse order
+
+agang@jagang-VirtualBox:~$ cat f4.txt
+ABCDEF
+12345
+jagang@jagang-VirtualBox:~$ tac f4.txt
+12345
+ABCDEF
+jagang@jagang-VirtualBox:~$ 
+
+
+rev command:
+=============
+rev means reverse 
+each line content will be reveresed  
+
+jagang@jagang-VirtualBox:~$ rev f4.txt
+FEDCBA
+54321
+jagang@jagang-VirtualBox
+
+
+head command:
+===========
+agang@jagang-VirtualBox:~$ cat f5.txt
+Line -1
+Lin2-2
+Line -3
+Lin-4
+Lin-5
+Line -6
+Lin2-7
+Line -8
+Lin-9
+Lin-10
+Line -11
+Lin2-12
+Line -13
+Lin-14
+Lin-15
+Line -16
+Lin2-17
+Line -18
+Lin-19
+Lin-20
+jagang@jagang-VirtualBox:~$ head f5.txt
+Line -1
+Lin2-2
+Line -3
+Lin-4
+Lin-5
+Line -6
+Lin2-7
+Line -8
+Lin-9
+Lin-10
+jagang@jagang-VirtualBox:~$ head -5 f5.txt
+Line -1
+Lin2-2
+Line -3
+Lin-4
+Lin-5
+jagang@jagang-VirtualBox:~$ head -2 f5.txt
+Line -1
+Lin2-2
+
+tail command:
+==========
+agang@jagang-VirtualBox:~$ cat f5.txt
+Line -1
+Lin2-2
+Line -3
+Lin-4
+Lin-5
+Line -6
+Lin2-7
+Line -8
+Lin-9
+Lin-10
+Line -11
+Lin2-12
+Line -13
+Lin-14
+Lin-15
+Line -16
+Lin2-17
+Line -18
+Lin-19
+Lin-20
+jagang@jagang-VirtualBox:~$ head f5.txt
+Line -1
+Lin2-2
+Line -3
+Lin-4
+Lin-5
+Line -6
+Lin2-7
+Line -8
+Lin-9
+Lin-10
+jagang@jagang-VirtualBox:~$ head -5 f5.txt
+Line -1
+Lin2-2
+Line -3
+Lin-4
+Lin-5
+jagang@jagang-VirtualBox:~$ head -2 f5.txt
+Line -1
+Lin2-2
+
+
+more command:
+==========
+jagang@jagang-VirtualBox:~$ more f5.txt
+Line -1
+Lin2-2
+Line -3
+Lin-4
+Lin-5
+Line -6
+Lin2-7
+Line -8
+Lin-9
+Lin-10
+Line -11
+Lin2-12
+Line -13
+Lin-14
+Lin-15
+Line -16
+Lin2-17
+Line -18
+Lin-19
+Lin-20
+Line -1
+
+
+less command:
+===========
+jagang@jagang-VirtualBox:~$less f5.txt
+Line -1
+Lin2-2
+Line -3
+Lin-4
+Lin-5
+Line -6
+Lin2-7
+Line -8
+Lin-9
+Lin-10
+Line -11
+Lin2-12
+Line -13
+Lin-14
+Lin-15
+Line -16
+Lin2-17
+Line -18
+Lin-19
+Lin-20
+Line -1
+
+
+hidden files and directories:
+============================
+We can create hidden files and directories just likes normal files and directories
+but filename or directory starts with .symbol
+
+jagang@jagang-VirtualBox:~$ touch .f2.txt
+jagang@jagang-VirtualBox:~$ ls
+abc_123.txt              abc.txt  dir4       f2.txt  MOHAN     Templates           XYZ_123
+ABC_2022.04.26-07.56.47  Desktop  Documents  f3.txt  Music     Videos              xyz_.log
+ABC_2022.04.26-07.57.38  dir2     Downloads  f4.txt  Pictures  xyz_
+ABC_2022.04.26-07.57.59  dir3     f1.txt     f5.txt  Public    xyz_06_01_2022.log
+jagang@jagang-VirtualBox:~$ ls -a
+.                        abc.txt        dir2       f2.txt  .mozilla   .vboxclient-clipboard.pid    XYZ_123
+..                       .bash_history  dir3       f3.txt  Music      .vboxclient-display.pid      xyz_.log
+abc_123.txt              .bash_logout   dir4       f4.txt  Pictures   .vboxclient-draganddrop.pid
+ABC_2022.04.26-07.56.47  .bashrc        Documents  f5.txt  .profile   .vboxclient-seamless.pid
+ABC_2022.04.26-07.57.38  .cache         Downloads  .gnupg  Public     Videos
+ABC_2022.04.26-07.57.59  .config        f1.txt     .local  .ssh       xyz_
+.abc.txt                 Desktop        .f2.txt    MOHAN   Templates  xyz_06_01_2022.log
+jagang@jagang-VirtualBox:~$ mkdir .ABC123
+jagang@jagang-VirtualBox:~$ ls
+abc_123.txt              abc.txt  dir4       f2.txt  MOHAN     Templates           XYZ_123
+ABC_2022.04.26-07.56.47  Desktop  Documents  f3.txt  Music     Videos              xyz_.log
+ABC_2022.04.26-07.57.38  dir2     Downloads  f4.txt  Pictures  xyz_
+ABC_2022.04.26-07.57.59  dir3     f1.txt     f5.txt  Public    xyz_06_01_2022.log
+jagang@jagang-VirtualBox:~$ ls -a
+.                        .bash_history  Documents  .local     .vboxclient-clipboard.pid
+..                       .bash_logout   Downloads  MOHAN      .vboxclient-display.pid
+.ABC123                  .bashrc        f1.txt     .mozilla   .vboxclient-draganddrop.pid
+abc_123.txt              .cache         .f2.txt    Music      .vboxclient-seamless.pid
+ABC_2022.04.26-07.56.47  .config        f2.txt     Pictures   Videos
+ABC_2022.04.26-07.57.38  Desktop        f3.txt     .profile   xyz_
+ABC_2022.04.26-07.57.59  dir2           f4.txt     Public     xyz_06_01_2022.log
+.abc.txt                 dir3           f5.txt     .ssh       XYZ_123
+abc.txt                  dir4           .gnupg     Templates  xyz_.log
+jagang@jagang-VirtualBox
+
+creation of Link files:
+=======================
+Supose abc.txt in D drive we send abc.txt file to desktop a shortcut file
+created in desktop.
+In Linux terminaglogy shortcut file called as Link file.
+
+Two types of Link files:
+
+1.Hard Link File
+2.Soft Link File
+
+1.Hard Lik File:
+=================
+agang@jagang-VirtualBox:~$ pwd
+/home/jagang
+jagang@jagang-VirtualBox:~$ ls
+abc_123.txt              abc.txt  dir4       f2.txt  MOHAN     Templates           XYZ_123
+ABC_2022.04.26-07.56.47  Desktop  Documents  f3.txt  Music     Videos              xyz_.log
+ABC_2022.04.26-07.57.38  dir2     Downloads  f4.txt  Pictures  xyz_
+ABC_2022.04.26-07.57.59  dir3     f1.txt     f5.txt  Public    xyz_06_01_2022.log
+jagang@jagang-VirtualBox:~$ cd Desktop
+jagang@jagang-VirtualBox:~/Desktop$ ls
+jagang@jagang-VirtualBox:~/Desktop$ mkdir rough
+jagang@jagang-VirtualBox:~/Desktop$ ls
+rough
+jagang@jagang-VirtualBox:~/Desktop$ cd rough
+jagang@jagang-VirtualBox:~/Desktop/rough$ pwd
+/home/jagang/Desktop/rough
+jagang@jagang-VirtualBox:~/Desktop/rough$ cat > A.txt
+AAAAAAAA
+BBBBBBBBBB
+CCCCCCCCCC
+DDDDDDDDDDDDDDDDDDjagang@jagang-VirtualBox:~/Desktop/rough$ 
+jagang@jagang-VirtualBox:~/Desktop/rough$ ^C
+jagang@jagang-VirtualBox:~/Desktop/rough$ 
+
+
+agang@jagang-VirtualBox:~$ pwd
+/home/jagang
+jagang@jagang-VirtualBox:~$ ls
+abc_123.txt              abc.txt  dir4       f2.txt  MOHAN     Templates           XYZ_123
+ABC_2022.04.26-07.56.47  Desktop  Documents  f3.txt  Music     Videos              xyz_.log
+ABC_2022.04.26-07.57.38  dir2     Downloads  f4.txt  Pictures  xyz_
+ABC_2022.04.26-07.57.59  dir3     f1.txt     f5.txt  Public    xyz_06_01_2022.log
+jagang@jagang-VirtualBox:~$ cd Desktop
+jagang@jagang-VirtualBox:~/Desktop$ ls
+jagang@jagang-VirtualBox:~/Desktop$ mkdir rough
+jagang@jagang-VirtualBox:~/Desktop$ ls
+rough
+jagang@jagang-VirtualBox:~/Desktop$ cd rough
+jagang@jagang-VirtualBox:~/Desktop/rough$ pwd
+/home/jagang/Desktop/rough
+jagang@jagang-VirtualBox:~/Desktop/rough$ cat > A.txt
+AAAAAAAA
+BBBBBBBBBB
+CCCCCCCCCC
+DDDDDDDDDDDDDDDDDDjagang@jagang-VirtualBox:~/Desktop/rough$ 
+jagang@jagang-VirtualBox:~/Desktop/rough$ ^C
+jagang@jagang-VirtualBox:~/Desktop/rough$ 
+
+agang@jagang-VirtualBox:~/Desktop/rough$ rm A.txt
+jagang@jagang-VirtualBox:~/Desktop/rough$ ls
+B.txt
+jagang@jagang-VirtualBox:~/Desktop/rough$ cat B.txt
+AAAAAAAA
+BBBBBBBBBB
+CCCCCCCCCC
+DDDDDDDDDDDDDDDDDD1234
+1234jagang@jagang-VirtualBox:~/Desktop/rough$ ^C
+jagang@jagang-VirtualBox:~/Desktop/rough$ 
+
+2.Soft Link File:
+================
+A sooft link file is a pointing to another file
+It is just like windows short cut file
+soft link file also known as symbolic link
+
+agang@jagang-VirtualBox:~/Desktop/rough$ cat > C.txt
+ABCD
+EFGH
+1234
+5678
+jagang@jagang-VirtualBox:~/Desktop/rough$ cat C.txt
+ABCD
+EFGH
+1234
+5678
+jagang@jagang-VirtualBox:~/Desktop/rough$ ln -s  C.txt   D.txt
+jagang@jagang-VirtualBox:~/Desktop/rough$ ls
+B.txt  C.txt  D.txt
+jagang@jagang-VirtualBox:~/Desktop/rough$ cat >> D.txt
+xyz
+102030
+jagang@jagang-VirtualBox:~/Desktop/rough$ cat D.txt
+ABCD
+EFGH
+1234
+5678
+xyz
+102030
+jagang@jagang-VirtualBox:~/Desktop/rough$ cat C.txt
+ABCD
+EFGH
+1234
+5678
+xyz
+102030
+jagang@jagang-VirtualBox:~/Desktop/rough$ ls -li
+total 8
+ 5227 -rw-rw-r-- 1 jagang jagang 58 Apr 27 08:21 B.txt
+ 6718 -rw-rw-r-- 1 jagang jagang 31 Apr 27 08:32 C.txt
+13740 lrwxrwxrwx 1 jagang jagang  5 Apr 27 08:30 D.txt -> C.txt
+jagang@jagang-VirtualBox:~/Desktop/rough$ rm C.txt
+jagang@jagang-VirtualBox:~/Desktop/rough$ ^C
+jagang@jagang-VirtualBox:~/Desktop/rough$ 
+
+
+
+Hard link file   ln orginalfilename  linkfile name
+Eg ln A.txt   B.txt
+
+Soft  link file   ln orginalfilename  linkfile name
+
+Eg ln -s  A.txt   B.txt
+
+
+
+Link files for directories:
+==========================
+We can't create hard link for directories
+jagang@jagang-VirtualBox:~$ mkdir JAVA
+jagang@jagang-VirtualBox:~$ ls
+abc_123.txt              abc.txt  dir4       f2.txt  JAVA      Public     xyz_06_01_2022.log
+ABC_2022.04.26-07.56.47  Desktop  Documents  f3.txt  MOHAN     Templates  XYZ_123
+ABC_2022.04.26-07.57.38  dir2     Downloads  f4.txt  Music     Videos     xyz_.log
+ABC_2022.04.26-07.57.59  dir3     f1.txt     f5.txt  Pictures  xyz_
+jagang@jagang-VirtualBox:~$ ln JAVA   JAVA2
+ln: JAVA: hard link not allowed for directory
+
+jagang@jagang-VirtualBox:~$ mkdir JAVA
+jagang@jagang-VirtualBox:~$ ls
+abc_123.txt              abc.txt  dir4       f2.txt  JAVA      Public     xyz_06_01_2022.log
+ABC_2022.04.26-07.56.47  Desktop  Documents  f3.txt  MOHAN     Templates  XYZ_123
+ABC_2022.04.26-07.57.38  dir2     Downloads  f4.txt  Music     Videos     xyz_.log
+ABC_2022.04.26-07.57.59  dir3     f1.txt     f5.txt  Pictures  xyz_
+jagang@jagang-VirtualBox:~$ ln -s JAVA   JAVA2
+
+agang@jagang-VirtualBox:~$ ls
+abc_123.txt              abc.txt  dir4       f2.txt  JAVA   Pictures   xyz_
+ABC_2022.04.26-07.56.47  Desktop  Documents  f3.txt  JAVA2  Public     xyz_06_01_2022.log
+ABC_2022.04.26-07.57.38  dir2     Downloads  f4.txt  MOHAN  Templates  XYZ_123
+ABC_2022.04.26-07.57.59  dir3     f1.txt     f5.txt  Music  Videos     xyz_.log
+jagang@jagang-VirtualBox:~$ rmdir JAVA
+jagang@jagang-VirtualBox:~$ ls
+abc_123.txt              abc.txt  dir4       f2.txt  JAVA2     Public     xyz_06_01_2022.log
+ABC_2022.04.26-07.56.47  Desktop  Documents  f3.txt  MOHAN     Templates  XYZ_123
+ABC_2022.04.26-07.57.38  dir2     Downloads  f4.txt  Music     Videos     xyz_.log
+ABC_2022.04.26-07.57.59  dir3     f1.txt     f5.txt  Pictures  xyz_
+jagang@jagang-VirtualBox:~$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

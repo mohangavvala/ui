@@ -1,0 +1,365 @@
+Functions:
+=========
+code reusablity
+code length decreses then performance increses
+
+Types of functions:
+==================
+1.Built in functions / Pre defiened functions:
+===============================================
+print()
+id()
+len()
+eval()
+......
+
+
+2.User defiened functions:
+==========================
+syntax:
+=======
+def  function_name():
+	'''Doc string'''
+	body function
+	
+	return value
+	
+function_name()
+
+a=10
+b=20
+print(a+b)
+a=50
+b=60
+print(a+b)
+
+a=100
+b=200
+print(a+b)
+
+
+
+def f1(a,b):
+    print(a+b)
+
+f1(10,20)
+f1(50,60)
+
+
+function with return statemnent:
+==============================
+
+
+def f1(a,b):
+    c=a+b
+    
+x=f1(10,20)
+print(x)
+
+def f1(a,b):
+    c=a+b
+    return c
+    
+x=f1(10,20)
+print(x)
+y=f1(100,200)
+print(y)
+
+
+
+
+def f1(a,b):
+    c=a+b
+    d=a-b
+    e=a*b
+    
+x=f1(10,20)
+print(x)
+    
+    
+def f1(a,b):
+    c=a+b
+    d=a-b
+    e=a*b
+    return c,d,e
+    
+x,y,z=f1(10,20)
+print(x,y,z)
+  
+Types of arguments:
+===================== 
+1.Postional arguments:
+=====================
+Order of passing of arguments are must be matched
+
+def f1(a,b):
+    return a+b,a-b
+
+x,y=f1(10,20)
+print(x)
+print(y)
+
+2.Keyword arguments:
+====================
+
+def f1(a,b):
+    return a+b,a-b
+
+x,y=f1(a=10,b=20)
+print(x)
+print(y)
+
+x,y=f1(b=20, a=10)
+print(x)
+print(y)
+
+3.default arguments:
+======================
+def f1(a,b):
+    return a+b
+    
+x=f1(10)
+print(x)
+
+
+def f1(a,b=0):
+    return a+b
+    
+x=f1(10)
+print(x)
+  
+def f1(a,b=0):
+    return a+b
+    
+x=f1(10,20)
+print(x)
+
+
+def f1(name="Guest"):
+    print("Hello:",name)
+f1()
+f1("RAM")
+  
+4.variable length arguments:
+============================  
+def f1(a,b):
+    c=a+b
+    return c
+x=f1(10,20)
+print(x)
+
+def f1(a,b):
+    c=a+b
+    return c
+x=f1(10,20,30,40,50)
+print(x)
+
+
+def f1(*n):
+    print(n)
+    print(type(n))
+    
+f1()
+f1(1)
+f1(1,2,3,4,5,6,7,8)
+
+
+t=(10,20,30,40)
+total=0
+for x in t:
+    total=total+x
+
+print(total) 
+
+
+def f1(*n):
+    total=0
+    for x in n:
+        total=total+x
+    return total
+x=f1()
+print(x)
+x=f1(1)
+print(x)
+x=f1(10,20,30,40,50)
+print(x)
+
+5.variable length keyword arguments:
+===================================
+def f1(**n):
+    print(n)
+    print(type(n))
+f1()
+f1(a=10,b=20)
+f1(a=10,b=20,c=30,d=40)
+
+Types of variables:
+===================
+1.Global variable
+2.local variable
+
+
+
+2.local variable
+def f1():
+    a=10
+    print(a)
+f1()
+def f2():
+    print(a)
+f2()
+
+1.Global variable
+b=100
+def f1():
+    a=10
+    print(a)
+    print(b)
+f1()
+def f2():
+    print(b)
+f2()
+
+
+global:
+======
+global is a key word which makes local variable to global variable
+
+
+
+def f1():
+    global a 
+    a=10
+    print(a)
+f1()
+
+def f2():
+    b=20
+    print(20)
+    print(a)
+f2()
+
+lambda functions or anonymous functions:
+====================================
+
+syntax:
+	lambda n:n*n
+
+def squreroot(n):
+    return n*n
+
+print(squreroot(2))
+
+#def squreroot(n):
+#    return n*n
+
+#print(squreroot(2))
+
+s= lambda n:n*n
+
+print(s(4))
+
+
+1.filter( )
+2.map()
+3.reduce()
+
+1.filter():
+==========
+
+syntax:
+========
+		filter(function,sequnce)
+
+l=[1,2,3,4,5,6,7,8,9]
+
+def even(n):
+    if n%2==0:
+        return True
+    else:
+        return False
+
+l1=[]
+
+for n in l:
+    if even(n)==True:
+       l1.append(n)
+print(l1)  
+
+
+l=[1,2,3,4,5,6,7,8,9]
+
+def even(n):
+    if n%2==0:
+        return True
+    else:
+        return False
+
+l2=list(filter(even,l))
+print(l2)
+
+
+l=lambda n:n%2==0
+print(l(1))
+print(l(2))
+
+
+
+l2=list(filter(lambda n:n%2==0,[1,2,3,4,5,6,7,8,9]))
+print(l2)
+
+
+l=['Ant','Apple','Bat','Ball','Axe','Cat']
+for x in l:
+    print(x[0])
+
+
+l=['Ant','Apple','Bat','Ball','Axe','Cat']
+l1=list(filter(lambda name:name[0]=="A",l))
+print(l1)
+
+2.map():
+=======
+
+syntax:
+======
+ map(function,sequnce)
+ 
+ l=[1,2,3,4,5]
+def sqrt1(n):
+    return n*n
+
+l1=list(map(sqrt1,l))
+print(l1)
+
+l=[1,2,3,4,5]
+l1=list(map(lambda n:n*n,l))
+print(l1)
+
+
+l1=[1,2,3,4,5,6,7,8,9]
+l2=[10,20,30,40,50]
+
+l3=list(map(lambda x,y:x+y,l1,l2))
+print(l3)
+
+
+3.reduce():
+==========
+
+syntax:
+======
+	reduce(function,sequnce)
+	
+	
+from functools import reduce
+
+l=[1,2,3,4,5]
+r=reduce(lambda x,y:x+y,l)
+print(r)
+
+
+from functools import reduce
+r=reduce(lambda x,y:x+y,range(1,101))
+print(r)
+

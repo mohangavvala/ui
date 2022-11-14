@@ -1,0 +1,150 @@
+Error:
+======
+print("hello)
+
+Exceptions:
+============
+
+a=int("Hello")
+
+
+Exception Handling:
+====================
+try:
+	
+exception:
+
+finally:
+
+
+
+a=10
+b=20
+c=0
+d=100
+print(a+b)
+print(a-b)
+print("hello")
+print("hello")
+print("hello")
+print("hello")
+print(c+d)
+print(a*b)
+print("hello")
+print("hello")
+print("hello")
+print("hello")
+print(d/c)
+print("hello")
+print("hello")
+print("hello")
+print("hello")
+
+
+
+Exception handling:
+===================
+
+try:
+	Risky code
+
+except: 
+	Handling code
+finally:
+	cleaning code
+	
+	
+a=10
+b=20
+c=0
+
+print(a+b)
+print(a-b)
+try:
+    print(a/c)
+except:
+    print("Any number dived with 0 is Not Possible")
+print("hello")
+print("hello")
+print("hello")
+print("hello")
+
+
+
+a=int(input("Enter nuber1:"))
+b=int(input("Enter nuber2:"))
+
+print(a+b)
+print(a-b)
+print(a/b)
+
+
+try:
+    a=int(input("Enter nuber1:"))
+    b=int(input("Enter nuber2:"))
+
+    print(a+b)
+    print(a-b)
+    print(a/b)
+except:
+    print("Exception raised")
+
+
+
+
+try:
+    a=10
+    b=0
+    d=int("Ten")
+    c=a/0
+   
+except ZeroDivisionError:
+    print("Zero divion Error Handeled")
+except TypeError:
+    print("TypeError  Handeled")
+except:
+   print("Handeled any type of error") 
+   
+   
+try:
+    a=10
+    b=0
+    
+    c=a/0
+   
+except ZeroDivisionError as e:
+    print("Zero divion Error Handeled",e)
+except TypeError:
+    print("TypeError  Handeled")
+except:
+   print("Handeled any type of error") 
+   
+
+
+try:
+    a=10
+    b=0
+    
+    #c=a/0
+   
+except:
+    print("Exception handled")
+finally:
+    print("Cleaned code")
+	
+
+
+
+try:
+    a=10
+    b=0
+    
+    c=a/0
+   
+except:
+    print("Exception handled")
+else:
+    print("Else")
+    
+finally:
+    print("Cleaned code")

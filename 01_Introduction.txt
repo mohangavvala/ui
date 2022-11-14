@@ -1,0 +1,1962 @@
+Identifier:
+-----------
+The name used for identification purpose is called Identifier
+Eg:
+==
+X=10
+
+def f1():
+
+class Test:
+
+Rules to define identifier:
+===========================
+1.Allowed symblos to define Identifier
+	Alohabet a to z and A to Z
+	Digits 0 to 9
+	Underscore (_)
+	Eg:
+	---
+	value=10
+	abc123=1000
+	abc_123=2000
+	ABC#123=2000
+	A B C =1000
+2.Identifier should not start with digits
+	Eg:
+	---
+	total123=300
+	123total=1000
+3.Python identifiers are case senstive
+	abc=1000
+	ABC=2000
+	Eg:
+		>>> abc=1000
+		>>> ABC=2000
+		>>> abc
+		1000
+		>>> ABC
+		2000
+4.Reserved words not used as identifiers:
+	x=10
+	if=20
+	for=20
+	Eg:
+		>>> if=100
+	SyntaxError: invalid syntax
+	>>> for=2000
+	SyntaxError: invalid syntax
+	>>> 
+5.There is no limit to the length of identifiers
+		xxxxxxxxxxxxxxxxxxxxxxxxx=1000
+
+6.If identifier starts with _ is known private variable
+	Eg : _x=10
+  If identifier starts with __ is known as strongly private
+   Eg: __x=100
+  If identifier starts with __ and ends with __ is known as magical methods 
+   Eg: __add__
+  
+7. In a single line we can define a multiple identifiers
+	a=10
+	b=20
+	c=30
+	a,b,c=10,20,30
+	b,a,c=20,10,30
+	
+Eg:
+abc=1000
+a,b,c=100,200
+a_b_c=1000
+a b c =100 200 300 
+
+Reserved Words:
+===============
+ The words reserved to reprent some functionality are known as Reserved Words
+ In python 33 key words will be there
+ True , False , None ---------->boolean
+ and, or,not, is  -------------->logical
+ if,else,elif ------------------->decession
+ while,for,break,continue,return,in,yield     ---->loop
+ try,except,finally,raise,assert            ------>Exceptions
+ import,from,as,class,def,pass,global,nonlocal,lambda,del,with ----->module
+
+Note:
+----
+	1. All Reserved Words contain only alphabet
+	2. Except True,False,None remaing word are lower case only
+	
+Data Types:
+===========
+	Data types reprents what data type store in the variable
+	Python Dynamically typed language
+	Eg:
+	--
+	c program:
+	---------
+			int a=10
+			char b='X'
+			str c="Python"
+	Python program:
+	---------------
+			a=10
+			b="x"
+			c="Python"
+	 type()
+		
+	>>> a=10
+	>>> type(a)
+	<class 'int'>
+	>>> b=12.5
+	>>> type(b)
+	<class 'float'>
+	>>> c="python"
+	>>> type(c)
+	<class 'str'>
+	>>> d="X"
+	>>> type(d)
+	<class 'str'>
+	
+Diffrent Data types in python:
+==============================
+1.int
+2.float
+3.complex
+4.bool
+5.string
+6.bytes
+7.bytesarray
+8.range
+9.list
+10.tuple
+11.set
+12.frozenset
+13.dict
+14.None
+
+	
+Python provides some inbuilt functions
+a=10
+print(a)
+print(10)
+
+type(a)
+>>> type(a)
+<class 'int'>
+>>> 	
+
+ In python everything treated as object or class	
+ 
+ id()
+	
+a=100
+print(a)
+type(a)
+id(a)
+
+print()
+type()
+id()
+
+1.Int:
+======
+ To represents integral values nothing but a whole numbers (With out decimal points)
+ Eg:
+ =====
+  1000,
+  2000, 
+  
+  a=1000
+  For int data there are 4 types of reprentations
+  1.Decimal form
+  2.Binary form
+  3.Octal form
+  4.Hex decimal form
+	
+1.Decimal form:
+ Base 10
+ allowed numbers from 0 to 9
+ eg: a=7878
+2.Binary form:
+ Base 2
+ allowed numbers 0 or 1
+ Eg: a=1010 invalid 
+	a=0b1010
+	a=0B1010   
+	>>> a=0b1010
+	>>> a
+	10  
+3.octal form:
+ Base 8
+ allowed numbers from 0 t0 7
+ a=0o654
+ a=0O654
+4.Hex decimal form
+ Base 16
+	allowed numbers from 0 to 9
+	 A to F or a to F
+	a=0xABC
+	a=0Xabc
+	>>> a=0xABC
+	>>> a
+	2748
+	
+2.float:
+=======
+ The numbers which having decimal point
+ Eg:
+	salary=2345.654
+	>>> salary=2345.654
+	>>> type(salary)
+	<class 'float'>
+	
+ eg:
+	1.2*(10)**3
+	a=1.2e3     1.2*1000
+	>>> type(salary)
+	<class 'float'>
+	>>> a=1.2e3
+	>>> a
+	1200.0
+		
+3.complex:
+	a+bj
+	x=10+20j
+	>>> x=10+20j
+	>>> x
+	(10+20j)
+	>>> type(x)
+	<class 'complex'>
+
+4.bool:
+	Allowed values in bool data type True and False
+	True ------ 1
+	False ------ 0
+	>>> a=True
+>>> a
+True
+>>> type(a)
+<class 'bool'>
+>>> b=False
+>>> b
+False
+>>> type(b)
+<class 'bool'>
+>>> 
+>>> True+True
+2
+>>> True+False
+1
+>>> False + False
+0
+
+5.string:
+========
+ Any sequence of charcters enclosed with single quotes (' ') or double quotes (" ") or
+ triple quotes ('''  ''') or ("""   """)
+ 
+ s=jagan
+>>> s=jagan
+Traceback (most recent call last):
+  File "<pyshell#17>", line 1, in <module>
+    s=jagan
+NameError: name 'jagan' is not defined
+>>> s="jagan"
+>>> s
+'jagan'
+>>> type(s)
+<class 'str'>
+
+a=" Python is Easy"
+a=''' Python
+	is	
+		Easy '''
+
+a=''' Python
+	is	
+		Easy '''
+        
+print(a)
+
+
+Index:
+-----
+python follows  two indexes 
+1.+ve index      starting 0
+2.-ve index      starting -1
+
+a='ABCDEFG'
+print(a)
+print(a[0])
+
+print(a[4])
+
+print(a[-3])
+
+print(a[99])
+
+slice operator:
+==============
+syntax:
+------
+s="ABCDEFG"
+
+s[begin:end]      begin index to end index -1
+
+s[2:5]            2  to 5-1           2 to 4
+
+#CDEF  expect
+#CDE
+
+Type casting:
+==========
+To convert one data type to another data type is known Type casting
+
+
+1.int()
+2.float()
+3.complex()
+4.bool()
+5.str()
+
+1.int():
+========
+ Any othe data type to integer 
+
+ float data converted into int by using int()
+ complex data not converted into int by using int()
+ bool data converted into int by using int()
+ If string contains alphabets is not possible convert string data into integer
+ If string contains numeric data  is  possible convert string data into integer
+ 
+2.float():
+=========
+	Any othe data type to float
+	integer data converted into float by using float()
+	complex data is not possible converted into float 
+	bool data is possible to converted into float
+	If string contains alphabets is not possible convert string data into float
+	If string contains numeric data  is  possible convert string data into float
+	
+3.complex():
+===========
+a=10+20
+a=Real+imag j
+
+ Format 1: complex(x)
+ ====================
+ integer data converted into complex by using complex()
+ float data converted into complex by using complex()
+ bool data is possible to converted into complex
+ If string contains alphabets is not possible convert string data into complex
+ If string contains numeric data  is  possible convert string data into complex
+  Format 2: complex(x,y)
+ ====================
+	x,y both are integers is possible convert data into complex
+	X int and y is  float is possible convert data into complex
+	x,y both are float is possible convert data into complex
+	bool data is possible to converted into complex
+	string data is not possible converted into complex
+  
+4.bool()
+-------
+		int,float,str,complex all data conveted into bool is possible
+		True -------> if data is non zero and non empty string
+		False -------->if data is zero and empty string
+5.str()
+========:
+	int,float,bool,complex all data conveted into string is possible
+Immutable :
+==========
+
+operators:
+==========
+1.Arithemetic operators
+2.Relational operators
+3.logical operators
+4.Bitwise Operators
+5.Assignment Operators
+6.Special Operators	
+	
+1.Arithemetic operators:
+
++
+-
+*
+/
+%	
+
+//	
+
+**
+	
+a=10
+b=2
+print("a+b:",a+b)
+print("a-b:",a-b)
+print("a*b:",a*b)
+print("a/b:",a/b)
+print("a%b:",a%b)
+print("a//b:",a//b)
+c=12.5
+d=4.2
+print("c//d:",c//d)
+print("c/d:",c/d)
+print("a**b:",a**b)
+	
+a="Python"
+b="Is Easy"
+print(a+b)
+
+s="Java"
+print(s*100)
+
+2.Relational operators:
+======================
+
+<
+>
+<=
+>=
+==
+=!
+	
+a=10
+b=20
+print(a>b)
+print(a<b)
+
+a="Pythons"
+b="Python"
+print(ord('P'))
+print(ord('J'))
+print(a>b)
+print(a<b)
+	
+	
+a=20
+b=10
+c=20
+#==    a and b having same value it returns True other wise returns False
+#!=     a and b having same value it returns False other wise returns True
+print(a==b)
+print(a==c)
+
+print(a!=b)
+print(a!=c)
+
+3.logical operators:
+ and,or, not
+	
+
+4.Bitwise Operators:
+&  bitwise and
+|	bitwise or
+^  bitwise xor
+~   negation
+<<    left shift
+>>   right shift
+
+5.Assignment Operators
+==========================:
+
+a=5
+a,b,c=5,6,7
+compount assignment operators:
+=============================
+x=10
+x+=10   ------> x=x+10
+x-=10        -->x=x-10
+x*=10        x=x*10
+x%=10        x=x%10
+	
+Ternary operator:
+=================
+x= value1  if condtion else  value 2
+
+x=30 if 10>20 else 40
+
+print(x)
+
+
+6.Special Operators	:
+===================
+
+1. Identity Operator
+2.membership Operator
+
+1. Identity Operator:
+ is
+ is not 
+ 
+ x1="Python"
+x2="Java"
+x3="Python"
+x4="Java"
+x5="PHP"
+print(id(x1))
+print(id(x2))
+print(id(x3))
+print(id(x4))
+print(id(x5))
+
+
+print(x1 is  x2 )
+print(x1 is  x3 )
+
+print(x1 is not  x2 )
+print(x1 is not  x3 )
+
+
+
+2.membership Operator:
+
+
+ in
+ not  in
+
+
+s="Hello world"
+print("Hello" in s)
+print("Hai" in s)
+print("e" in s)
+
+print("Hello"  not in s)
+print("Hai" not in s)
+print("e" not in s)
+
+Modules:
+========
+import math
+#sqrt()
+
+print(math.sqrt(16))
+print(math.pi)
+
+
+import math as m
+#sqrt()
+
+print(m.sqrt(16))
+print(m.pi)
+
+from  math import sqrt,pi
+print(sqrt(16))
+print(pi)
+
+
+from  math import * 
+print(sqrt(16))
+print(pi)
+
+from math import *
+r=10
+area=pi*(r**2)
+print(area)
+#A=Pi*r**2
+
+
+
+from math import *
+r=10
+area=pi*(r**2)
+print(area)
+#A=Pi*r**2
+
+Input and output statements:
+=============================
+
+Input:
+======
+input()
+
+
+name=input("Enter your Name:")
+
+print(name)
+print(type(name))
+
+rollno=int( input("Enter your No:")  )
+print(rollno)
+print(type(rollno))
+
+x=int(input("Enter First Number:"))
+y=int(input("Enter Second Number:"))
+print("x+y",x+y)
+
+
+# name,eid,esal,eaddrs,vehicle
+ename=input("Enter Name:")
+eid= int(input("Enter ID:"))
+esal=float(input("Enter your salary:"))
+eaddrs=input("Enter Addres:")
+vehicle=bool(input("if having vehicle give yes other wise leave it:"))
+print("NAME:",ename)
+print("ID:",eid)
+print("SALARY:",esal)
+print("Addres:",eaddrs)
+print("Vehichle:",vehicle)
+
+split():
+=======
+
+
+x=input("Enter two numbers:").split(',')
+print(x)
+print(type(x))
+
+a,b,c=[  int(x)    for x in input("Enetr three Numbers:").split()]
+#['1', '2', '3']
+#
+print(a)
+
+print(b)
+print(c)
+print(type(a))
+print(type(b))
+print(type(c))
+print("SUM :",a+b+c)
+
+eval()
+========
+
+ename=input("Enter Name:")
+eid= eval(input("Enter ID:"))
+print(type(eid))
+esal=eval(input("Enter your salary:"))
+print(type(esal))
+eaddrs=input("Enter Addres:")
+vehicle=eval(input("if having vehicle give yes other wise leave it:"))
+print(type(vehicle))
+print("NAME:",ename)
+print("ID:",eid)
+print("SALARY:",esal)
+print("Addres:",eaddrs)
+print("Vehichle:",vehicle)
+
+print():
+=======
+
+a="hello"
+print(a)
+print()
+print("How r ?")	
+print("jagan","Mohan")
+print("jagan"+"Mohan")
+
+a,b,c=10,20,30
+print(a,b,c)
+print(a,b,c,sep='')
+print(a,b,c,sep='-')
+
+print("hello",end='#')
+print("Hru?",end='#')
+print("Fine")
+
+a="Jagan"
+b=222
+c="ATP"
+
+print("Myname is",a,"Id is:",b,"coming From:",c)
+
+print("Myname is {}   Id is {}   coming From {}".format(a,b,c))
+
+Flow control:
+=============
+
+At runtime in which order statement going to be exiguted 
+
+3 Types
+1.condtional statements or selection statements:
+=================================================
+
+if 
+if else
+if elif else
+
+
+if 1>2:
+    print("IF block")
+else:
+    print("ELSE block")
+
+if 1>2:
+    print("IF block")
+elif 1<2:
+    print("elf-1")
+elif 1<2:
+    print("elf-2")
+else:
+    print("ELSE block")
+    
+
+name=input("Enter your Name:")
+if name =="jagan":
+    print("Hello ",name)
+else:
+    print("Hello guest!")   
+
+
+
+cteam=input("Enter Your Team name:")
+if cteam=="IND":
+    print("INDIA TEAM")
+elif cteam=="AUS":
+    print("Australia team")
+elif cteam=="SL":
+    print("Sri Lanka")
+elif cteam=="BAN":
+    print("Bangladesh Team")
+else:
+    print("Entaerd team is invalid")
+
+
+n1=int(input("Enter First number:"))
+n2=int(input("Enter Second number:"))
+n3=int(input("Enter Third number:"))
+
+if n1>n2 and n1>n3:
+    print(n1)
+elif n2>n3:
+    print(n2)
+else:
+    print(n3)
+ 
+
+Iterative statements:
+====================
+1.for loop
+2.while loop
+ 
+1.for loop:
+	syntax:
+		  for  x   in  sequence
+
+count=0
+for x in "Python":
+        print(x)
+        
+        count=count+1 
+
+print(count)
+  
+    
+s="Python"
+i=0
+for x in s:
+    print(x,"--------",i)
+    i=i+1
+    
+
+s=input("Enter String:")
+i=0
+for x in s:
+    print(x,"--------",i)
+    i=i+1
+    
+l=[1,2,3,4,5,6,7,8,9,10]
+for x in l:
+    if x%2==0:
+        print(x)
+
+l=[1,2,3,4,5,6,7,8,9,10]
+for x in l:
+    if x%2!=0:
+        print(x)
+
+l=[1,2,3,4]
+total=0
+for x in l:
+    total=total+x
+    
+print(total)
+    
+2.while loop:
+=============
+while condtion:
+	...........
+	.........
+	...............
+x=1
+
+while x<=10:#11<=10
+    print(x)
+    x=x+1
+    
+
+n=5
+total=0
+i=1
+while i<=n:              # 1<=5        #2<=5
+    total=total+i        #total=0+1=1     #total=
+    i=i+1                #i=1+1=2         #i=2+1=3
+print(total)
+#1 2 3 4 5
+s=input("enter string:")
+l=len(s)-1  #6-1=5
+i=0
+while i<=l:
+    print(s[i],'------',i)
+    i+=1#i=i+1
+
+3.Transfer Statements:
+======================
+1.break
+2.continue
+3.pass
+
+1.break:
+=========
+
+l=[10,20,30,500,600,900,70,80]
+for x in l:
+    if x>100:
+        print("Loop breaks here ",x)
+        break
+    print(x)
+    
+print("Out of the loop")
+
+2.continue:
+============
+
+cart=[10,20,30,500,600,900,70,80,200,76,600]
+for x in cart:
+    if x>100:
+        print("In surence must be requried the product price of greter ttha 100 rs, current product price:",x)
+        continue
+    print(x)
+    
+print("Out of the loop")
+
+3.pass:
+=======
+if True:
+    pass
+else:   
+    print("hi")
+
+def f1():
+    a=10
+    b=30
+    print(a+b)
+def f2():
+    pass
+def f3():
+    a=10
+    b=30
+    print(a-b)
+f1()
+f3()
+
+String data type:
+=================
+s='a'
+s="abc"
+
+s="Python 
+	is 
+	easy"
+
+s="""Python 
+	is 
+	easy"""
+print(s)
+
+
+index:
+=====
+1.+ve index       0 to  end
+2.-ve index       -1 to  start
+
+slice operator:
+===============
+1. s[start:end]      ------> start indext to end index-1
+
+s="Python is easy"
+print(s[4:8])  #o i  
+
+
+2.s[start:end:step]    ------> start indext to end index-1 default step =1
+
+s="Pythoniseasy"
+
+print(s)
+print(len(s))
+print(s[::-1])
+
+
+print(s[4:12])  #o i 
+print(s[4:12:1]) # start to end-1 
+print(s[4:12:2])
+print(s[4:12:3])
+
+print(s[2:8:1])
+print(s[2:8:2])
+
+print(s[2:8:-1])  #2   to end +1 2 to 9
+print(s[8:4:-1])
+
+
+Remove spaces in given string:
+===============================
+1.lstrip()
+2.rstrip()
+3.strip()
+
+
+split():
+=======
+s="Python#is#easy".split('#')
+print(s)
+print(type(s))
+
+join():
+======
+l=['Python', 'is', 'easy']
+
+s='-'.join(l)
+print(s)
+
+change case of given string:
+===========================
+s="the IS a PythoN ClasS"
+print(s.upper())
+print(s.lower())
+print(s.swapcase())
+print(s.title())
+print(s.capitalize())
+
+checking of given string starts with and ends with:
+==================================================
+
+s="Hello India"
+print(s.startswith("Hai"))
+print(s.endswith("India"))
+
+
+print("Jagan".isalnum())
+print("Jagan222".isalpha())
+print("Jagan".isalpha())
+print("12345".isdigit())
+print("12345ABC".isdigit())
+print("ABC".isupper())
+print("abc".isupper())
+print("abc".islower())
+print("ABC".islower())
+print("".isspace())
+print(" ".isspace())
+
+
+
+s=input("Enter string:")
+if s.isalnum():
+    print("Given string contains alpha numeric data")
+    
+    
+    if s.isalpha():#222
+        print("Given string contains alpha  data")
+        
+        
+        if s.islower():
+            print("Given string contains lower case alpha  data")
+        else:
+            print("Given string contains upper case alpha  data")
+        
+    elif s.isdigit():
+        print("Given string contains Numeric   data")
+        
+elif s.isspace():
+    print("Given string contains space  data")
+    
+    
+else:
+     print("Given string contains special char  data")
+#1.  jagan123   #  is alphanumeric
+#2. jagan      #   is alphanumeric  #
+#3.  222
+#4. *
+
+
+2.List:
+========
+1.Insertion order is preserved
+2.Duplicate values allowed
+3.Hetrogenious data
+4.List mutable
+
+creation of List data type:
+===========================
+1.  l=[]
+
+
+l=[]
+print(type(l))
+print(l)
+
+
+2.
+ 5,6,7,8,9
+ 
+l=[5,6,7,8,9]
+print(type(l))
+print(l)
+3.
+l=eval(input("Enetr list data:"))
+print(l)
+output
+Enetr list data:[1,2,3,4,5,6]
+[1, 2, 3, 4, 5, 6]
+
+
+range(10)#0,9 
+range(100)#0 ,99
+
+4.list()
+l=list(range(10))
+print(type(l))
+print(l)
+
+output
+<class 'list'>
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+5.split()
+s="Python is Easy".split()
+print(type(s))
+print(s)
+
+output:
+<class 'list'>
+['Python', 'is', 'Easy']
+
+
+Traversing the elements of list:
+===============================
+l=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+
+l=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(l)
+print(len(l))#10
+i=0
+while i < len(l):  #0<10         #1<10                     9<10    10<10
+ 
+    print(l[i])    #l[0]-->0     # l[1]--->1               l[9]--->9
+    i+=1#i=i+1     #i=0+1--->1    #i=1+1--->2              i=9+1---10
+	
+
+
+l=[11,12,13,14,15,16,17,18,19,20]
+print(l)
+for x  in l:#[11,12,13,14,15,16,17,18,19,20]
+    print(x)
+	
+l=[11,12,13,14,15,16,17,18,19,20]
+print(l)
+for x  in l:#[11,12,13,14,15,16,17,18,19,20]
+    if x%2==0:
+        print(x)
+		
+
++ve index 0  to n-1
+-ve  index  -1
+
+
+l=['A','B','C','D']#
+#   0   1   2   3
+#   -4  -3  -2   -1
+
+x=len(l)#4
+#t=range(x)#range(4) ---> 0  to 3
+for i in range(x):
+    print(l[i],"+ve index",i,"-ve index",i-x)
+    
+    
+methods in list data type	:
+==============================
+
+1.len(list)
+2.count()
+l=[10,20,30,10,20,30,40,50,50,60]
+print(l.count(10))
+print(l.count(50))
+print(l.count(60))
+3.append()
+l=[10,20,30,40]
+print(l)
+l.append(50)
+print(l)
+l.append(51)
+print(l)
+l.append(52)
+print(l)
+l.append(53)
+print(l)
+l.append(49)
+print(l)
+
+4.insert()
+
+l=[10,20,30,40]
+print(l)
+l.append(50)
+print(l)
+l.insert(1,51)#[10,51,20,30,40]
+
+print(l)
+l.insert(99,100)
+print(l)
+
+5.extend():
+l1=[1,2,3,4,5]
+l2=["A","B","c","D"]
+print(l1)
+print(id(l1))
+print(l2)
+l1.extend(l2)
+print(l1)
+print(id(l1))
+print(l2)
+
+
+l1=[1,2,3,4,5]
+l2=["A","B","c","D"]
+print(l1)
+print(l2)
+l3=l1+l2
+print(l3)
+
+remove():
+=======
+
+l1=[1,2,3,4,5,6,7,8,9]
+print(l1)
+l1.remove(7)
+print(l1)
+
+
+l=[10,20,30,40,50,60,70,80,90]
+x=int(input("Enter element to be remove:")) #100
+
+if x in l:
+    l.remove(x)
+    print("Element removed")
+    print(l)
+else:
+    print("Specified element not there 
+	
+pop()
+=====
+l=[10,20,30,40,50,60,70,80]
+print(l)
+print(l.pop())
+print(l)
+print(l.pop())
+print(l)
+
+print(l.pop())
+print(l)
+
+
+pop(index)
+==========
+l=[10,20,30,40,50,60,70,80]
+print(l)
+print(l.pop(2))
+print(l)
+
+
+oredering elements of given list:
+=================================
+1.reverse()
+
+l=[1,2,3,4,5]
+print(l)
+l.reverse()
+print(l)
+
+
+2.sort():
+=======
+l=[1,3,2,5,6,222,333,778,234,553,899,987]
+l=[1,3,2,5,6,222,333,778,234,553,899,987]
+print(l)
+l.sort()
+print(l)
+
+l=["A","X","T","B"]
+print(l)
+l.sort()
+print(l)
+
+l=["Boy","Girl","Cat","Dog","Ball"]
+print(l)
+l.sort()
+print(l)
+
+
+l=["Boy","Girl","Cat","Dog","Ball"]
+print(l)
+l.sort(reverse=True)
+print(l)
+
+
+Aliasing and cloneing of List objects:
+======================================
+
+
+x=[10,20,30,40]
+y=x
+print(x)
+print(y)
+print(id(x))
+print(id(y))
+
+x=[10,20,30,40]
+y=x
+print(x)
+print(y)
+print(id(x))
+print(id(y))
+
+print(x[2])
+x[2]=90#30=90
+print(x)
+print(y)
+
+
+cloneing:
+========
+	process of creating exactly duplicate independent object is cloneing
+
+1. By using slice operator:
+===========================
+
+x[start:end]--------> 0  to  n-1
+
+x[:]
+
+x=[1,2,3,4,5,6]
+#print(x[ : ])#x[start:end:step]# x[0:5]
+y=x[:]
+
+print(x)
+print(y)
+print(id(x))
+print(id(y))
+
+
+2.copy():
+=========
+
+x=[1,2,3,4,5,6]
+y=x.copy()
+print(x)
+print(y)
+print(id(x))
+print(id(y))
+
+
+
+x=[1,2,3,4,5,6]
+y=x.copy()
+x[2]=222
+y[4]=666
+print(x)
+print(y)
+
+
+mathematical operations on list:
+================================
+
++  operator is list concatination
+*  operator  is for list repeat
+
+
+l1=[1,2,3,4,5]
+l2=[6,7,8,9,10]
+l3=l1+l2  #l1.extend(l2)
+print(l3)
+
+
+l1=[1,2,3,4,5]
+l2=l1*5
+print(l2)
+
+
+membership operations:
+======================
+
+l1=[1,2,3,4,5]
+print(4 in l1)
+print(100 in l1)
+
+print(4 not in l1)
+print(100 not in l1)
+
+List comprehions:
+================
+syntax
+=========
+list=[expresion   for x in sequence]
+l1=[1,2,3,4,5]
+for x in l1:
+    print(x*2)    
+	
+l=[]
+for x in range(1,11):#1 to 10
+    l.append(x)  
+print(l)
+
+l=[ x   for x in range(1,11)] 
+print(l)
+
+
+l=[ x*x    for x in range(1,11)] 
+print(l)
+
+
+
+l=[1,2,3,4,5,6,7,8,9,10]
+l2=[]
+for x in l:
+    if x%2==0:
+        l2.append(x)
+print(l2)
+
+
+l=[x for x in range(1,11) if x%2==0]
+print(l)
+
+s="Python is easy".split()#['Python', 'is', 'easy']
+print(s)
+l=[]
+for x in s:
+    l.append(x.upper())
+
+print(l)
+
+
+s="Python is easy".split()#['Python', 'is', 'easy']
+l=[x.upper() for x in s]
+print(l)
+
+
+l=[x.upper() for x in "Python is easy".split()]
+print(l)
+
+
+slice operator:
+===================
+l[start:end]   --------> 0 to end-1
+l[start:end:step]-------->0 to end-1  step is 1
+
+
+if step is +ve:
+===============
+l[start:end:+ve]
+1.Forward direction
+2.start to end -1
+
+
+l=["A","B","C","D","E","F","G"]
+#   0    1  2  3    4    5    6
+
+print(l[4])
+print(l[1:4])
+print(l[1:5:2])# 
+
+
+if step is -ve:
+===============
+
+1.Revese direction
+2.start to end+1
+
+l=["A","B","C","D","E","F","G"]
+#   0    1   2   3    4    5   6
+#  -7  -6   -5   -4   -3    -2  -1
+
+print(l[: : 2])#A G
+
+print(l[: :-1])
+
+print(l[2: 4 :-1])#2   5
+print(l[5:2:-1])
+
+
+Tuple Data structure:
+====================
+1.Tuple is exactly similar as list but tuple is immutable
+2.The read only version of list
+3.Insertion order is preserved
+4.( )
+5.Duplicates are allowed
+6. Hertrogenious data allowed
+
+
+t=(1,2,3,4,5)
+print(t)
+print(type(t))
+
+t=1,2,3,4,5
+print(t)
+print(type(t))
+
+
+t=(1,)
+print(t)
+print(type(t))
+
+
+1.t=()
+2.t=(10,)
+3.t=10,20,30
+4.tuple()
+l=[10,20,30,40]
+t=tuple(l)
+
+print(t)
+print(type(t))
+
+
+l="Puthon is easy"
+t=tuple(l)
+
+print(t)
+print(type(t))
+
+index and slice operator on tuple:
+=================================
+t=(1,2,3,4,5,6,7,8,9)
+print(t[4])
+print(t[4:8:1])
+
+t=[1,2,3,4,5,6,7,8,9]
+t[4]=33
+print(t)
+
+t=(1,2,3,4,5,6,7,8,9)
+t[4]=33
+print(t)
+
+
+
+mathematical operations on tuple:
+=================================
++   for concatination
+* 	 for repeat
+
+
+t1=(1,2,3,4,5,6,7,8,9)
+t2=(1,2,3,4,5,6,7,8,9)
+t=t1+t2
+print(t)
+print(t1*3)
+
+methods in tuple:
+=================
+1.len()
+2.count(x)
+3.index()
+
+t1=(1,2,3,4,5,6,7,8,9,2,2,1,5)
+
+print(t1.count(2))
+print(t1.count(1))
+print(t1.count(5))
+print(t1.index(7))
+print(t1.index(5))
+
+
+t1=(90,20,30,10,50,40)
+print(sorted(t1))
+
+min() and max():
+================
+t1=(30,10,50,70,60)
+
+t1=(30,10,50,70,60)
+
+print(min(t1))
+print(max(t1))
+
+
+tuple packing and unpacking:
+============================
+a=10
+b=20
+c=30
+d=40
+t=a,b,c,d
+print(t)
+
+
+t=(10,20,30,40)
+a,b,c,d=t
+print(a)
+print(b)
+print(c)
+print(d)
+
+
+l=[x  for x in range(1,11)]
+print(l)
+
+
+l=(x  for x in range(1,11))
+print(l)
+
+for tuple comprehions not suported it returns genarator object
+
+l=(x  for x in range(1,11))
+print(l)
+print(type(l))
+
+
+l=(x  for x in range(1,11))
+print(l)
+print(type(l))
+
+for x in l:
+    print(x)
+    
+set :
+====
+1.Duplicates not allowed
+2.oreder is not applicable
+3.index/ slcing not applicable
+4.{10,20,30,"A","B",2.2,30+6j,True}
+5.Hetrogenious data will be allowed
+6.mutable
+
+s={}--------->it dict
+s={1,2,3}
+print(s)
+print(type(s))
+
+s=set()
+print(s)
+print(type(s))
+
+
+set() ---------->which is ued for create empty set or set of elements
+
+s=set()
+print(s)
+print(type(s))
+s.add(10)
+print(s)
+s.add(11)
+print(s)
+s.add(10)
+print(s)
+
+#print(s[0])
+print(s[1:2])
+
+
+creation of set:
+================
+
+s=set() ------->empty set creation
+
+s={1,2,3,4,5}
+
+l=[1,2,3,4,5,6,7,8]
+s=set(l)
+print(s)
+
+
+s=set("Python is easy")
+print(s)
+
+
+s=eval(input("Enter data:"))
+print(s)
+
+
+mathematical operations on set:
+================================
+
++ and * operators not applicable for set 
+s1={1,2,3}
+s2={4,5,6}
+#s3=s1+s2
+#print(s3)
+s3=s1*3
+print(s3)
+
+importent methods in set:
+===========================
+1. len()
+s1={1,2,3}
+print(len(s1))
+
+2.add()
+s1={1,2,3}
+
+s1.add(4)
+print(s1)
+
+3.update()
+
+l1=[1,2,3,4,9]
+s={6,7,8,9}
+s.update(l1)
+print(s)
+
+remove():
+========
+s={6,7,8,9}
+s.remove(9)
+print(s)
+
+s={6,7,8,9}
+s.remove(19)
+print(s)
+
+dicard():
+========
+s={6,7,8,9}
+s.discard(9)
+print(s)
+
+s={6,7,8,9}
+s.discard(19)
+print(s)
+
+pop():
+======
+
+s={10,20,30,40,50,60,70,80,90,100,200}
+print(s.pop())
+print(s)
+
+
+clear():
+======
+
+s={10,20,30,40,50,60,70,80,90,100,200}
+
+print(s)
+s.clear()
+print(s)
+
+
+union ():
+==========
+s1={10,20,30,40}
+s2={30,40,50,60}
+#s3=s1.union(s2)
+s3=s1| s2
+print(s1)
+print(s2)
+print(s3)
+
+
+
+intersection:
+=============
+s1={10,20,30,40}
+s2={30,40,50,60}
+#s3=s1.intersection(s2)
+s3=s1 & s2
+print(s1)
+print(s2)
+print(s3)
+
+diffence():
+=========
+s1={10,20,30,40}
+s2={30,40,50,60}
+#s3=s1.difference(s2)
+s3=s1-s2
+
+print(s1)
+print(s2)
+print(s3)
+
+symmetric diffence():
+-==================
+
+s1={10,20,30,40}
+s2={30,40,50,60}
+#s3=s1.symmetric_difference(s2)
+s3=s1^s2
+print(s1)
+print(s2)
+print(s3)
+
+
+comprehions for set:
+======================
+s=set()
+for x in range(1,6):
+    s.add(x)  
+print(s)
+
+
+s={x  for x in range(1,6)} 
+print(s)
+
+
+s={x*x  for x in range(1,6)} 
+print(s)
+
+
+
+Dictionary data type:
+=====================
+
+d={1:"jagan",2:"siva"}
+print(d)
+
+1.key-value pairs
+2.key are not duplicate(unique keys)
+  values duplicated
+3.Insertion order is not preserved
+4.No index and slicing
+5.dict mutable
+6.Hetrogenious data allowed for key and values
+
+creation of dict:
+=================
+1.empty dict():
+===============
+d={}
+print(type(d))
+
+
+dict():
+=======
+
+d=dict()
+print(type(d))
+
+
+2.:
+d={k1:v1,k2:v2}
+
+d={1:"A",2:"B",3:"c"}
+print(d)
+
+3.
+
+l=[(1,"A"),(2,"B"),(3,"C")]
+print(l)
+d=dict(l)
+print(d)
+
+
+4.Dynamically 
+
+d=eval(input("Enter dict:"))
+print(d)
+
+Access data from dict:
+=================
+
+d={1:"A",2:"B",3:"C"}
+print(d)
+print(d[2])
+print(d[3])
+print(d[20])
+
+
+d={1:"A",2:"B",3:"C"}
+print(d)
+key=int(input("Enter key:"))
+
+if key in d:
+    print("It value:",d[key])
+else:
+    print("Invalid Key")
+	
+
+d={1:"A",2:"B",3:"C"}
+print(d)
+d[4]="D"
+print(d)
+d[2]="E"
+print(d)
+
+d={1:"A",2:"B",3:"C"}
+print(d)
+d[4]="D"
+print(d)
+d[2]="E"
+print(d)
+
+del d[1],d[2],d[3]
+print(d)
+
+
+n=int(input("Enetr Number of employees:"))#3
+d={} #d=dict()
+for i in range(n):#range(3) --- 0  to 2 --- 0,1,2
+    salray=int(input("Enter salray:"))
+    ename=input("Enter name:")
+    d[salray]=ename#d[1000]='jagan'   
+print(d)
+for k,v in d.items():# 
+    print("Employee name:{} Salary:{}".format(v,k))
+
+
+important methods in dict:
+============================
+1.len()
+
+d={1:"A",2:"B",3:"C"}
+print(len(d))
+
+d.get(key):
+===========
+
+d={1:"A",2:"B",3:"C"}
+print(d.get(2))
+print(d.get(200))
+
+d.get(key, default value):
+=========================
+d={1:"A",2:"B",3:"C"}
+print(d.get(2))
+print(d.get(200,"D"))
+print(d)
+
+d={1:"A",2:"B",3:"C"}
+print(d.get(2,"HELLO"))
+print(d.get(200,"HELLO"))
+
+
+update():
+============
+
+d1={1:"A",2:"B",3:"C"}
+d2={4:"D",5:"E",6:"F"}
+print(d2)
+d1.update(d2)
+print(d1)
+
+keys():
+======
+d={1:"A",2:"B",3:"C"}
+k=d.keys()
+print(k)
+print(type(k))
+for x in d.keys():
+    print(x)
+
+values():
+========
+d={1:"A",2:"B",3:"C"}
+v=d.values()
+print(v)
+print(type(v))
+for v in d.values():
+    print(v)
+
+items():
+========
+
+d={1:"A",2:"B",3:"C"}
+i=d.items()
+print(i)
+print(type(i))
+
+for item in d.items():
+    print(item)
+
+
+
+a,b=(1,2)
+print(a)
+print(b)
+
+
+d={1:"A",2:"B",3:"C"}
+i=d.items()
+print(i)
+print(type(i))
+
+for k,v in d.items():
+    print(k,"---------",v)
+	
+	
+	
+clear():
+=======
+
+d={1:"A",2:"B",3:"C"}
+print(d)
+d.clear()
+print(d)
+
+
+pop(key):
+=======
+
+d={1:"A",2:"B",3:"C"}
+print(d.pop(2))
+print(d)
+
+d={1:"A",2:"B",3:"C"}
+print(d.pop(200))
+print(d)
+
+pop(key,value):
+==============
+d={1:"A",2:"B",3:"C"}
+print(d.pop(2,"Hello"))
+print(d)
+
+d={1:"A",2:"B",3:"C"}
+print(d.pop(200,"Hello"))
+print(d)
+
+
+popitem():
+=========
+d={1:"A",2:"B",3:"C"}
+print(d.popitem())
+print(d)
+
+
+
+d={1:"A",2:"B",3:"C"}
+#4:"D"
+d[4]="D"
+print(d)
+
+d={1:"A",2:"B",3:"C"}
+#4:"D"
+d[2]="D"
+print(d)
+
+setdefault():
+============
+d={1:"A",2:"B",3:"C"}
+print(d)
+d.setdefault(4,"D")
+print(d)
+
+d={1:"A",2:"B",3:"C"}
+print(d)
+d.setdefault(2,"D")
+print(d)
+
+
+w=input("Enter word:")#ABCA
+d={}#
+for ch in w:
+    d[ch]=d.get(ch,0)+1#
+print(d)
+#{'A': 1, 'B': 1, 'C': 1}
+
+
+comprehions:
+========
+
+d={x:x*x for x in range(1,6)}
+print(d)

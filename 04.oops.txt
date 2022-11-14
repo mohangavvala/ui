@@ -1,0 +1,891 @@
+Objective oriented Programing :
+==============================
+1.class
+2.object
+3.reference variable
+
+1.class:
+=======
+Class is blue print or plan to create objects
+2.Object:
+=========
+Physical existence of class is nothing but object
+
+3.Reference variable:
+====================
+The variable which is used to refer the object is called reference variable
+By using reference variable we can access properties of object
+
+
+syntax:
+========
+
+class class_name:
+	'''Doc string'''
+	methods
+	variables
+	
+
+
+class  Student:
+    '''Student class '''
+    
+
+
+print(Student.__doc__)
+help(Student)
+
+Inside python class three types of variables are allowed
+========================================================
+1.Instance variables (object level variables)
+2.Static variables    (class level variable)
+3.local variables     (method level variable)
+
+Inside python class three types of methods are allowed
+========================================================
+
+1.Instance methods
+2.class methods
+3.static methods
+
+class Student:
+    '''Student is class'''
+    def __init__(self):
+        self.name="jagan"
+        self.no=222
+        
+    def info(self):
+        print("Name:",self.name)
+        print("No:",self.no)
+
+s1=Student()
+s1.info()
+print(s1.name)
+print(s1.no)
+
+
+class Student:
+    '''Student is class'''
+    def __init__(self,name,no):
+        self.name=name
+        self.no=no
+
+s1=Student("Jagn",222)
+
+s2=Student("RAM",200)
+
+
+print(s1.name)
+print(s1.no)
+
+print(s2.name)
+print(s2.no)
+
+class Student:
+    '''Student is class'''
+    def __init__(self,name,no):
+        self.name=name
+        self.no=no
+    def info(self):
+        print("name:",self.name)
+        print("NO:",self.no)
+        
+
+s1=Student("Jagn",222)
+s2=Student("RAM",200)
+print(s1.name)
+print(s1.no)
+print(s2.name)
+print(s2.no)
+s1.info()
+s2.info()
+self:
+=====
+self is a variable
+we can take any name insted of self   
+self is a reference variable of object inside of class
+
+class Student:
+    '''Student is class'''
+    def __init__(self,name,no):
+        self.name=name
+        self.no=no
+    def info(self):
+        print("name:",self.name)
+        print("NO:",self.no)
+        
+
+s1=Student("Jagn",222)
+s2=Student("RAM",200)
+print(s1.name)
+print(s1.no)
+print(s2.name)
+print(s2.no)
+s1.info()
+s2.info()
+
+
+class Student:
+    '''Student is class'''
+    def __init__(self,name,no):
+        self.name=name
+        self.no=no
+    def info(self):
+        print(id(self))
+        print("name:",self.name)
+        print("NO:",self.no)
+        
+
+s1=Student("Jagn",222)
+s2=Student("RAM",200)
+print(s1.name)
+print(s1.no)
+print(id(s1))
+print(s2.name)
+print(s2.no)
+s1.info()
+s2.info()
+print(id(s2))
+
+
+
+constructor:
+============
+
+It is a special method in python
+The name of constructor always fixed  i.e __init__
+When ever creating a object constructor will be exicuted automatically
+Per object constructor will exicuted only once 
+The first argument to the constructor is self only
+The self is argument to the  any methods  those methods known as instance methods
+constructor is also instance method
+
+
+class Test:
+    def __init__ (self):
+        print("Constructor")
+        
+t1=Test()
+t2=Test()
+t3=Test()
+
+The main purpose of constructor is to declare and intilize the instance variables
+
+
+
+class Student:
+    def __init__ (self,name,rollno,marks):
+        self.name=name
+        self.rollno=rollno
+        self.marks=marks
+    def info(self):
+        print("Name:",self.name)
+        print("Roll:",self.rollno)
+        print("Marks:",self.marks)
+
+
+    
+s1=Student("Jagan",222,70)
+s2=Student("RAM",200,80)
+
+print(s1.name, s1.rollno, s1.marks)
+print(s2.name, s2.rollno, s2.marks)
+
+s1.info()
+s2.info()
+
+
+class State:
+    def __init__(self,sname,scaptial):
+        self.sname=sname
+        self.scaptial=scaptial
+    def display(self):
+        print("STATE :",self.sname)
+        print("CAPITAL:",self.scaptial)
+list_states=[]
+while True:
+    sname=input("Enter State Name:")
+    scaptial=input("Enter Capital Name:")
+    s=State(sname,scaptial)
+    list_states.append(s)
+    print("State information added sucessfully")
+    option=input("Do you want add one more state [Yes/No]")#NO no No nO
+    if option.lower()=='no':
+        break
+print(list_states)
+for x in list_states:
+    x.display()
+    print()
+
+
+Types of variables:
+==================
+1.Instance variables or object level variables:
+===============================================
+The variables which are varied from object to object are known as Instance variables
+
+class Student:
+    def __init__ (self,name,no):
+        self.name=name
+        self.no=no
+2.static variables or class level variables:
+============================================
+The variable which is same for every object is known as static variable
+
+class Employee:
+    comany_name="WIPRO"
+    def __init__(self,name,eid):
+        self.name=name
+        self.eid=eid
+
+3.Local variables or method level variables:
+=============================================
+The variables which are used to meet temmpory requriements are known as Local variables
+class Employee:
+    comany_name="WIPRO"
+    def __init__(self,name,eid):
+        x=10
+        self.name=name
+        self.eid=eid
+        for y in range(x):
+            .......
+
+
+
+Types of methods:
+==================
+
+1.Instance method:
+==================
+Inside instance method we can declare or access instance variables information
+The first argument to the instance method is self
+self is always reffrening current object
+
+class Employee:
+    def __init__ (self):
+        self.name="jagan"
+        self.no=222
+    def info(self):
+        print(self.name)
+        print(self.no)
+
+e1=Employee()
+e1.info()
+
+
+2.class method:
+=============
+Inside class method we can access the only class level variables 
+
+The class methods declared using @classmethod decarator
+The first argument to the class method is cls
+cls is always reffer a class level information
+
+class Employee:
+    company="WIPRO"
+    @classmethod
+    def cname(cls):
+        print("Name:",cls.company)
+e1=Employee()
+e1.cname()
+
+
+3.static methods:
+===============
+Inside static method we are not accessing any class level or object level inforamation the we go for
+genaral utlity methods i.e static methods
+
+The static method declare using @staticmethod decarator
+
+
+class Employee:
+    @staticmethod
+    def get_sum():
+        a=10
+        b=20
+        return a+b
+e1=Employee()
+x=e1.get_sum()
+print(x)
+
+
+class Student:
+    school_name="ABCDEFG"
+    def __init__(self,name,marks):
+        self.name=name
+        self.marks=marks
+    def get_info(self):
+        print("Name:",self.name)
+        print("marks:",self.marks)
+        
+    @classmethod
+    def get_school(cls):
+        print("SChool Name:", cls.school_name)
+    @staticmethod
+    def get_sum():
+        a=10
+        b=20
+        return a+b
+s1=Student("Jagan",70)
+s1.get_info()
+s1.get_school()
+x=s1.get_sum()
+print(x)
+
+
+Inhertance:
+===========
+The concept of inherting members from one class to another class is known as Inhertance
+
+1.single Inhertance:
+===================
+
+ 
+The concept of inherting members from one class(parent class) to another class  (Child class)
+
+
+
+class P:
+    def m1(self):
+        print("Parent class M1 method")
+        
+        
+class C:
+    def m2(self):
+        print("Child class M2 method")
+        
+        
+p=P()
+c=C()
+p.m1()
+c.m2()
+
+
+class P:
+    def m1(self):
+        print("Parent class M1 method")
+        
+        
+class C:
+    def m2(self):
+        print("Child class M2 method")
+        
+        
+p=P()
+c=C()
+p.m1()
+c.m2()
+c.m1()
+
+
+
+class P:
+    def m1(self):
+        print("Parent class M1 method")
+        
+        
+class C(P):
+    def m2(self):
+        print("Child class M2 method")
+        
+        
+p=P()
+c=C()
+p.m1()
+c.m2()
+c.m1()
+
+
+
+2.multi level Inhertance:
+========================
+The concept of inherting members from multiple classes to single class is known as multiple
+Inhertance
+
+
+class GP:
+    def m3(self):
+        print("Land")
+
+class P(GP):
+    def m2(self):
+        print("House")
+
+class C(P):
+    def m1(self):
+        print("Bike")
+        
+c=C()
+c.m1()
+
+c.m2()
+c.m3()
+
+3.Hirachical Inhertance:
+======================
+
+The concept of inherting members  from one class to multiple classes which are present at
+same level is known as Hirachical Inhertance
+
+class P:
+    def m1(self):
+        print("Parent method")
+class C1 (P):
+    def m2(self):
+        print("Child1 method")
+class C2 (P):
+    def m3(self):
+        print("Child2 method")
+
+c1=C1()
+c2=C2()
+c1.m2()
+c1.m1()
+
+c2.m3()
+c2.m1()
+
+4.multiple inhetance:
+====================
+It reverse of Hirachical Inhertance
+multiple parent classes to single child class
+
+class P1:
+    def m1(self):
+        print("P1 method")
+class P2:
+    def m2(self):
+        print("P2 method")
+
+class C (P1,P2):
+    def m3(self):
+        print("C method")
+        
+c=C()
+c.m1()
+c.m2()
+c.m3()
+
+5.Hybrid Inhertance:
+====================
+The combination of single,multi level, Hirachical,multiple Inhertances is known as Hybrid Inhertance
+
+MRO Method Resoultion Order 
+
+
+super():
+=======
+
+class P:
+    def m1(self):
+        print("Parent method")
+class C (P):
+    def m2 (self):
+        print("Child method")
+        
+
+c=C()
+c.m2()
+
+
+class P:
+    def m1(self):
+        print("Parent method")
+class C (P):
+    def m2 (self):
+        self.m1()
+        print("Child method")
+        
+
+c=C()
+c.m2()
+
+
+
+class P:
+    def m1(self):
+        print("Parent method")
+class C (P):
+    def m1 (self):
+        
+        print("Child method")
+        
+
+c=C()
+c.m1()
+
+
+class P:
+    def m1(self):
+        print("Parent method")
+class C (P):
+    def m1 (self):
+        self.m1()
+        
+        print("Child method")
+        
+
+c=C()
+c.m1()
+
+
+class P:
+    def m1(self):
+        print("Parent method")
+class C (P):
+    def m1 (self):
+        super().m1()
+        
+        print("Child method")
+        
+
+c=C()
+c.m1()
+
+
+
+
+Polymorphism:
+=============
+Poly means Many
+morphs means Forms
+
+"Many Forms"
+
+
++   operator
+============
+a=10
+b=20
+c=a+b  #c=30
+
+
+a="hello"
+b="World"
+c=a+b  #c="helloworld"
+
+
+
+
+1.overloading
+
+2.over riding
+
+
+1.overloading:
+=============
+1.operator overloading
+2.method overloading
+3.constructor overloading
+
+2.over riding:
+============
+1.method overriding
+2.constructor overriding
+
+
+1.overloading:
+=============
+
+1.operator overloading:
+=======================
+Same operator we can use multiple purpose
+
+print(10+20)
+print("hello"+"World")
+
+
+class Accounts:
+    def __init__ (self,ammount):
+        self.ammount=ammount
+
+c1=Accounts(1000)
+c2=Accounts(2000)
+
+print(c1+c2)
+
+
+
+Every operator internally having a special methods.While executing operator these methods will exicuted.
+These methods are known as Magical methods
+
+Behind + operator __add__() 
+Behind - operator __sub__() 
+Behind > operator __gt__()
+
+class Accounts:
+    def __init__ (self,ammount):
+        self.ammount=ammount
+    def __add__(self,other):
+        total=self.ammount+other.ammount
+        return total
+        
+
+c1=Accounts(1000)
+c2=Accounts(2000)
+
+print(c1+c2)
+
+__add__(self, other)	To get called on add operation using + operator
+__sub__(self, other)	To get called on subtraction operation using - operator.
+__mul__(self, other)	To get called on multiplication operation using * operator.
+__floordiv__(self, other)	To get called on floor division operation using // operator.
+__truediv__(self, other)	To get called on division operation using / operator.
+__mod__(self, other)	To get called on modulo operation using % operator.
+__pow__(self, other[, modulo])	To get called on calculating the power using ** operator.
+__lt__(self, other)	To get called on comparison using < operator.
+__le__(self, other)	To get called on comparison using <= operator.
+__eq__(self, other)	To get called on comparison using == operator.
+__ne__(self, other)	To get called on comparison using != operator.
+__ge__(self, other)	To get called on comparison using >= operator.
+
+class Accounts:
+    def __init__ (self,ammount):
+        self.ammount=ammount
+    def __add__(self,other):
+        total=self.ammount+other.ammount
+        return total
+    def __sub__(self,other):
+        total=self.ammount-other.ammount
+        return total
+        
+    def __gt__(self,other):
+        total=self.ammount>other.ammount
+        return total
+    def __mul__(self,other):
+        result=self.ammount*other.ammount
+        return result
+        
+    
+
+c1=Accounts(1000)
+c2=Accounts(2000)
+
+print(c1+c2)
+
+
+print(c1-c2)
+
+print(c1>c2)
+
+print(c1*c2)
+
+
+
+2.method overloading:
+=====================
+same method we can use for multiple purpose
+method overloading concept not supported in python
+
+class Addtion:
+    def m1(self):
+        print("No args")
+    def m1(self,a):
+        print("one args")
+        
+
+a1=Addtion()
+a1.m1()
+a1=Addtion(10)
+a1.m1()
+
+
+
+class Test:
+    def m1(self):
+        print("Zero args")
+        
+t1=Test()
+t1.m1()
+        
+
+class Test:
+    def m1(self):
+        print("Zero args")
+    def m1(self,a):
+        print("One arg method")
+        
+t1=Test()
+t1.m1()
+
+class Test:
+    def m1(self):
+        print("Zero args")
+    def m1(self,a):
+        print("One arg method")
+        
+t1=Test()
+t1.m1(10)
+        
+class Test:
+    def m1(self,*n):
+        print(" args")
+    
+        
+t1=Test()
+t1.m1(10,20)
+        
+
+3.constructor overloading:
+============================
+constructor is also a method, so constructor overloading is also not supported in 
+python
+class Test:
+    def __init__(self):
+        print("Constructor-1")
+    def __init__(self,a):
+        print("Constructor-2")
+    
+        
+t1=Test()
+
+class Test:
+    def __init__(self):
+        print("Constructor-1")
+    def __init__(self,a):
+        print("Constructor-2")
+    
+        
+t1=Test(10)
+
+        
+
+
+
+2.over riding:
+============
+1.method overriding
+2.constructor overriding
+
+1.method overriding:
+====================
+Members present in parent class are  default available to child class through inhetance
+
+class P:
+    def m1(self):
+        print("TVS Bike")
+        
+class C(P):
+    pass
+
+c=C()
+c.m1()
+
+
+class P:
+    def m1(self):
+        print("TVS Bike")
+       
+class C(P):
+    def m1(self):
+        print("CAR")
+
+c=C()
+c.m1()
+
+2.constructor overriding:
+========================
+
+
+class P:
+    def __init__(self):
+        print("Parent Constructor")
+class C (P):
+    pass
+
+c1=C()
+
+class P:
+    def __init__(self):
+        print("Parent Constructor")
+class C (P):
+    def __init__(self):
+        print("Child constructor")
+
+c1=C() 
+
+
+Encapuslation:
+===============
+The process of grouping or binding of coresponding methods,variables into a single 
+unit is known as Encapuslation
+
+Encapuslation=Abstraction+Data hidding
+
+Abstraction:
+==========
+The method which only declaration but not implementation
+
+
+1.Abstract method
+2.Abstract Class
+3.Interface
+
+1.Abstract method:
+===================
+Abstract method is nothing but partially implemeted method
+
+from abc import abstractmethod
+
+class Test:
+    @abstractmethod
+    def m1(self):
+        pass
+
+2.Abstract Class:
+================
+Abstract class is nothing but partially implemeted class
+Every Abstract class is child class of ABC class
+
+from abc import abstractmethod,ABC
+
+class No_of_legs(ABC):
+    @abstractmethod
+    def get_no_legs(self):
+        pass
+
+from abc import abstractmethod,ABC
+
+class No_of_legs(ABC):
+    @abstractmethod
+    def get_no_legs(self):
+        pass
+        
+
+class Hen(No_of_legs):
+    def get_no_legs(self):
+        print(2)
+class Cow(No_of_legs):
+    def get_no_legs(self):
+        print(4)
+h=Hen()
+h.get_no_legs()
+c=Cow()
+c.get_no_legs()
+
+3.Interface:
+===========
+There is no interface concept in python
+
+But interface abstract class only abstract methods
+
+from abc import abstractmethod,ABC
+
+class Test(ABC):
+    def m1(self):
+        print("m1")
+    @abstractmethod
+    def m2(self):
+        print("m2")
+
+from abc import abstractmethod,ABC
+
+class Test(ABC):
+    @abstractmethod
+    def m1(self):
+        print("m1")
+    @abstractmethod
+    def m2(self):
+        print("m2")
+
+

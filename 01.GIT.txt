@@ -1,0 +1,89 @@
+
+git init -----------> gitintilization
+git add ------------->code adding to stageing area
+git status ---------->check status of git
+
+git commit -m "commit message"  ----------> code which commited to local repo
+git push ------------> code moved to Remote repo (i.e Git hub)
+
+
+
+
+jagan@DESKTOP-VDCL0DV MINGW64 /e/LINUXREPO
+$ git init
+Initialized empty Git repository in E:/LINUXREPO/.git/
+
+jagan@DESKTOP-VDCL0DV MINGW64 /e/LINUXREPO (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        LInuxDocs/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jagan@DESKTOP-VDCL0DV MINGW64 /e/LINUXREPO (master)
+$ git add .
+
+jagan@DESKTOP-VDCL0DV MINGW64 /e/LINUXREPO (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   LInuxDocs/01.Linux.txt
+        new file:   LInuxDocs/git3.png
+
+
+jagan@DESKTOP-VDCL0DV MINGW64 /e/LINUXREPO (master)
+$ git commit -m "version-1"
+[master (root-commit) fe887d5] version-1
+ 2 files changed, 1487 insertions(+)
+ create mode 100644 LInuxDocs/01.Linux.txt
+ create mode 100644 LInuxDocs/git3.png
+
+jagan@DESKTOP-VDCL0DV MINGW64 /e/LINUXREPO (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+jagan@DESKTOP-VDCL0DV MINGW64 /e/LINUXREPO (master)
+$ git branch -M main
+
+jagan@DESKTOP-VDCL0DV MINGW64 /e/LINUXREPO (main)
+$ git remote add origin https://github.com/mohangavvala/Linuxversions.git
+
+jagan@DESKTOP-VDCL0DV MINGW64 /e/LINUXREPO (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 29.09 KiB | 5.82 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/mohangavvala/Linuxversions.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+jagan@DESKTOP-VDCL0DV MINGW64 /e/LINUXREPO (main)
+$
+
+
+clone:
+====
+jagan@DESKTOP-VDCL0DV MINGW64 /e/LINUXclone
+$ git clone https://github.com/mohangavvala/Linuxversions.git
+Cloning into 'Linuxversions'...
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 0), reused 5 (delta 0), pack-reused 0
+Receiving objects: 100% (5/5), 29.09 KiB | 960.00 KiB/s, done.
+
+jagan@DESKTOP-VDCL0DV MINGW64 /e/LINUXclone
+$
